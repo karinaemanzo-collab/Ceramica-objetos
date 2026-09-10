@@ -24,6 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Pestañas de la galería (Pipas / Tazas / Shotglasses)
+  const galleryTabs = document.querySelectorAll('.gallery-tab');
+  const galleryCategories = document.querySelectorAll('.gallery-category');
+
+  galleryTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-target');
+
+      galleryTabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle('is-active', isActive);
+        t.setAttribute('aria-selected', String(isActive));
+      });
+
+      galleryCategories.forEach((category) => {
+        const isTarget = category.id === `gallery-${target}`;
+        category.classList.toggle('is-active', isTarget);
+        category.hidden = !isTarget;
+      });
+    });
+  });
+
   // Formulario de contacto: mensaje de confirmación en pantalla.
   // NOTA: el envío real del formulario depende del "action" configurado
   // en index.html (ver comentario ahí sobre Formspree/Getform).

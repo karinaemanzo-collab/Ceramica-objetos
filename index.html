@@ -98,36 +98,80 @@
           Una muestra de piezas hechas a mano. Cada pieza es única y las cantidades son limitadas.
         </p>
 
+        <!-- Sub-navegación entre categorías de la galería -->
+        <div class="gallery-tabs" role="tablist" aria-label="Categorías de la galería">
+          <button type="button" class="gallery-tab is-active" data-target="pipas" role="tab" aria-selected="true">Pipas</button>
+          <button type="button" class="gallery-tab" data-target="tazas" role="tab" aria-selected="false">Tazas</button>
+          <button type="button" class="gallery-tab" data-target="shotglasses" role="tab" aria-selected="false">Shotglasses</button>
+        </div>
+
+        <!-- ---- Categoría: Pipas ---- -->
+        <!-- Fotos reales del taller, ajustadas y recortadas a la misma proporción cuadrada -->
+        <div class="gallery-category is-active" id="gallery-pipas" role="tabpanel">
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="assets/img/pipas/pipa-1.jpg" alt="Pipa de cerámica hecha a mano, esmaltado verde oliva y negro" loading="lazy">
+              <figcaption>Pipa esmaltada, verde oliva</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/pipas/pipa-2.jpg" alt="Pipa de cerámica hecha a mano, esmaltado azul grisáceo" loading="lazy">
+              <figcaption>Pipa esmaltada, azul grisáceo</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/pipas/pipa-3.jpg" alt="Pipa de cerámica hecha a mano, esmaltado negro azulado" loading="lazy">
+              <figcaption>Pipa esmaltada, negro azulado</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/pipas/pipa-4.jpg" alt="Pipa de cerámica hecha a mano, esmaltado en tonos tierra" loading="lazy">
+              <figcaption>Pipa esmaltada, tonos tierra</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/pipas/pipa-5.jpg" alt="Pipa de cerámica hecha a mano, acabado blanco mate" loading="lazy">
+              <figcaption>Pipa acabado blanco mate</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- ---- Categoría: Tazas ---- -->
         <!--
-          REEMPLAZAR: cada <img> de esta cuadrícula por fotos reales de tus productos.
-          Sugerencia: fotos cuadradas (1:1), mismo tamaño aprox. (800x800px), fondo neutro.
-          También actualiza el texto alt y el título/precio de cada pieza si lo deseas mostrar.
+          REEMPLAZAR: placeholders temporales. Cuando tengas las fotos reales de
+          tazas, sigue el mismo patrón que la categoría "Pipas" de arriba
+          (fotos cuadradas, mismo tamaño aprox., fondo neutro).
         -->
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-1.svg" alt="Pieza de cerámica hecha a mano 1" loading="lazy">
-            <figcaption>Vasija en terracota</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-2.svg" alt="Pieza de cerámica hecha a mano 2" loading="lazy">
-            <figcaption>Taza artesanal</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-3.svg" alt="Pieza de cerámica hecha a mano 3" loading="lazy">
-            <figcaption>Plato decorativo</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-4.svg" alt="Pieza de cerámica hecha a mano 4" loading="lazy">
-            <figcaption>Florero de arcilla local</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-5.svg" alt="Pieza de cerámica hecha a mano 5" loading="lazy">
-            <figcaption>Cuenco esmaltado</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-6.svg" alt="Pieza de cerámica hecha a mano 6" loading="lazy">
-            <figcaption>Set de tazas</figcaption>
-          </figure>
+        <div class="gallery-category" id="gallery-tazas" role="tabpanel" hidden>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="assets/img/taza-1.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
+              <figcaption>Taza artesanal</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/taza-2.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
+              <figcaption>Taza artesanal</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/taza-3.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
+              <figcaption>Taza artesanal</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- ---- Categoría: Shotglasses ---- -->
+        <!-- REEMPLAZAR: placeholders temporales, mismo patrón que "Pipas" -->
+        <div class="gallery-category" id="gallery-shotglasses" role="tabpanel" hidden>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="assets/img/shot-1.svg" alt="Shotglass de cerámica hecho a mano (imagen provisional)" loading="lazy">
+              <figcaption>Shotglass artesanal</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/shot-2.svg" alt="Shotglass de cerámica hecho a mano (imagen provisional)" loading="lazy">
+              <figcaption>Shotglass artesanal</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/img/shot-3.svg" alt="Shotglass de cerámica hecho a mano (imagen provisional)" loading="lazy">
+              <figcaption>Shotglass artesanal</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
