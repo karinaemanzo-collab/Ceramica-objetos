@@ -24,25 +24,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Pestañas de la galería (Pipas / Tazas / Shotglasses)
+  // Pestañas de la galería (Pipas / Tazas / Shotglasses / Ceniceros)
   const galleryTabs = document.querySelectorAll('.gallery-tab');
   const galleryCategories = document.querySelectorAll('.gallery-category');
 
+  function activateGalleryTab(target) {
+    galleryTabs.forEach((t) => {
+      const isActive = t.getAttribute('data-target') === target;
+      t.classList.toggle('is-active', isActive);
+      t.setAttribute('aria-selected', String(isActive));
+    });
+
+    galleryCategories.forEach((category) => {
+      const isTarget = category.id === `gallery-${target}`;
+      category.classList.toggle('is-active', isTarget);
+      category.hidden = !isTarget;
+    });
+  }
+
   galleryTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const target = tab.getAttribute('data-target');
+    tab.addEventListener('click', () => activateGalleryTab(tab.getAttribute('data-target')));
+  });
 
-      galleryTabs.forEach((t) => {
-        const isActive = t === tab;
-        t.classList.toggle('is-active', isActive);
-        t.setAttribute('aria-selected', String(isActive));
-      });
-
-      galleryCategories.forEach((category) => {
-        const isTarget = category.id === `gallery-${target}`;
-        category.classList.toggle('is-active', isTarget);
-        category.hidden = !isTarget;
-      });
+  // Enlaces del menú principal que apuntan directo a una categoría
+  // (Pipas / Tazas / Shotglasses / Ceniceros): activan esa pestaña y
+  // desplazan hasta la galería.
+  document.querySelectorAll('[data-gallery-category]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      activateGalleryTab(link.getAttribute('data-gallery-category'));
+      document.getElementById('galeria').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
