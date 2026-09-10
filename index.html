@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerámica Objetos | Piezas de cerámica hecha a mano en Puerto Rico</title>
+  <meta name="description" content="Cerámica Objetos: piezas de cerámica hecha a mano en Bayamón, Puerto Rico, vertiente de Proyecto Antillana y su trabajo con arcilla local.">
+
+  <!-- Tipografía: Playfair Display para títulos, Jost para texto general -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- REEMPLAZAR: favicon del negocio. Puedes generar uno en https://realfavicongenerator.net/ -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/pieza-1.svg">
+</head>
+<body>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo">Cerámica Objetos</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="siteNav">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section id="inicio" class="hero">
+      <!-- REEMPLAZAR: assets/img/hero.svg por una foto real de una pieza o del estudio (formato .jpg o .webp recomendado, ancho ~1600px) -->
+      <div class="hero-media">
+        <img src="assets/img/hero.svg" alt="Piezas de cerámica hecha a mano" loading="eager">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Hecho a mano en Puerto Rico</p>
+        <!-- REEMPLAZAR: texto del título si deseas cambiar el nombre o eslogan -->
+        <h1>Cerámica Objetos</h1>
+        <!-- REEMPLAZAR: frase corta de presentación del negocio -->
+        <p class="hero-tagline">
+          Piezas de cerámica hecha a mano en Puerto Rico, moldeadas con paciencia y arcilla local.
+          Una vertiente de <strong>Proyecto Antillana</strong>, dedicado a la fabricación de baldosas
+          de cerámica con materiales de nuestra propia tierra.
+        </p>
+        <div class="hero-actions">
+          <a href="#galeria" class="btn btn-primary">Ver la galería</a>
+          <a href="#contacto" class="btn btn-outline">Cómo comprar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SOBRE MÍ / LA MARCA ======================= -->
+    <section id="sobre-mi" class="about">
+      <div class="container about-grid">
+        <div class="about-media">
+          <!-- REEMPLAZAR: assets/img/sobre-mi.svg por una foto del estudio, del proceso o de la ceramista -->
+          <img src="assets/img/sobre-mi.svg" alt="Estudio casero de cerámica en Bayamón, Puerto Rico" loading="lazy">
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">Sobre la marca</p>
+          <h2>Arcilla, paciencia y raíz local</h2>
+          <!-- REEMPLAZAR: historia de la marca con tu texto definitivo -->
+          <p>
+            Cerámica Objetos nace en un estudio casero en <strong>Bayamón, Puerto Rico</strong>, donde
+            cada pieza se forma, se cuece y se termina a mano, una a la vez. No hay dos piezas
+            idénticas: cada una lleva las huellas del proceso y del lugar de donde viene.
+          </p>
+          <p>
+            Este proyecto es una vertiente de <strong>Proyecto Antillana</strong>, una iniciativa dedicada
+            a la fabricación de baldosas cerámicas utilizando arcilla local de Puerto Rico. Esa misma
+            filosofía —trabajar con lo que la tierra antillana nos ofrece— guía cada objeto que sale
+            de este taller: honesto, artesanal y con identidad propia.
+          </p>
+          <p>
+            Al elegir una pieza de Cerámica Objetos, apoyas un proceso lento, hecho con las manos y
+            pensado para durar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= GALERÍA ======================= -->
+    <section id="galeria" class="gallery">
+      <div class="container">
+        <p class="eyebrow center">Piezas</p>
+        <h2 class="center">Galería</h2>
+        <p class="section-lead center">
+          Una muestra de piezas hechas a mano. Cada pieza es única y las cantidades son limitadas.
+        </p>
+
+        <!--
+          REEMPLAZAR: cada <img> de esta cuadrícula por fotos reales de tus productos.
+          Sugerencia: fotos cuadradas (1:1), mismo tamaño aprox. (800x800px), fondo neutro.
+          También actualiza el texto alt y el título/precio de cada pieza si lo deseas mostrar.
+        -->
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/img/pieza-1.svg" alt="Pieza de cerámica hecha a mano 1" loading="lazy">
+            <figcaption>Vasija en terracota</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/img/pieza-2.svg" alt="Pieza de cerámica hecha a mano 2" loading="lazy">
+            <figcaption>Taza artesanal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/img/pieza-3.svg" alt="Pieza de cerámica hecha a mano 3" loading="lazy">
+            <figcaption>Plato decorativo</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/img/pieza-4.svg" alt="Pieza de cerámica hecha a mano 4" loading="lazy">
+            <figcaption>Florero de arcilla local</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/img/pieza-5.svg" alt="Pieza de cerámica hecha a mano 5" loading="lazy">
+            <figcaption>Cuenco esmaltado</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/img/pieza-6.svg" alt="Pieza de cerámica hecha a mano 6" loading="lazy">
+            <figcaption>Set de tazas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CÓMO COMPRAR / CONTACTO ======================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Cómo comprar</p>
+          <h2>Hagamos un pedido</h2>
+          <p class="section-lead">
+            Escríbeme por el formulario, o directamente por redes sociales, WhatsApp o correo.
+            Te respondo lo antes posible con disponibilidad y precios.
+          </p>
+
+          <!-- REEMPLAZAR: información de contacto real -->
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer">@TU_USUARIO</a>
+            </li>
+            <li>
+              <span class="contact-label">WhatsApp</span>
+              <a href="https://wa.me/17870000000" target="_blank" rel="noopener noreferrer">+1 (787) 000-0000</a>
+            </li>
+            <li>
+              <span class="contact-label">Correo</span>
+              <a href="mailto:hola@ceramicaobjetos.com">hola@ceramicaobjetos.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Ubicación</span>
+              <span>Bayamón, Puerto Rico</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-wrap">
+          <!--
+            REEMPLAZAR: este formulario no envía datos por sí solo (es HTML/JS estático,
+            sin backend). Para recibir los mensajes por correo, conéctalo a un servicio
+            gratuito como Formspree (https://formspree.io) o Getform (https://getform.io):
+              1. Crea una cuenta y un formulario nuevo en ese servicio.
+              2. Copia el "endpoint" (URL) que te dan.
+              3. Reemplaza el valor de action="" de abajo con esa URL.
+            Alternativamente, borra el formulario y deja solo los enlaces de contacto de arriba.
+          -->
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST">
+            <div class="form-field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="logo">Cerámica Objetos</p>
+        <p>Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
+      </div>
+
+      <!-- REEMPLAZAR: enlaces de redes sociales -->
+      <ul class="footer-social">
+        <li><a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://wa.me/17870000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        <li><a href="mailto:hola@ceramicaobjetos.com">Email</a></li>
+      </ul>
+
+      <p class="footer-copy">&copy; <span id="year"></span> Cerámica Objetos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
