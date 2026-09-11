@@ -3,21 +3,21 @@
    Estética editorial y minimalista: mucho espacio en blanco,
    serif delicado (Fraunces) para títulos, sans-serif limpio
    (Inter) para texto, fotos de producto grandes y protagonistas.
-   Paleta en tonos tierra/terracota sobre un fondo hueso amplio.
+   Paleta: crimson red como acento sobre un fondo off-white amplio.
    REEMPLAZAR: los valores en :root si deseas ajustar la paleta.
    ========================================================= */
 
 :root {
   /* Paleta de colores */
-  --color-bone: #faf6f1;        /* blanco hueso, fondo principal (amplio) */
-  --color-bone-dark: #f1e7d9;   /* hueso más cálido, para acentos puntuales */
-  --color-clay: #c98a5e;        /* arcilla clara */
-  --color-terracotta: #b9714e;  /* terracota, color de acento */
-  --color-terracotta-dark: #8a4a2f;
-  --color-ink: #2b1d14;         /* casi negro cálido, para titulares */
-  --color-brown: #4a2f22;       /* texto principal */
-  --color-brown-soft: #7a6656;  /* texto secundario, más suave */
-  --color-line: rgba(43, 29, 20, 0.12); /* líneas finas / divisores */
+  --color-bone: #faf6f2;         /* off-white, fondo principal (amplio) */
+  --color-bone-dark: #f1e6e3;    /* off-white más cálido, para acentos puntuales */
+  --color-crimson: #a01330;      /* crimson red, color principal de acento */
+  --color-crimson-dark: #7a0f25; /* crimson oscuro, hover/estados activos */
+  --color-crimson-soft: #c9425a; /* crimson claro, detalles suaves */
+  --color-ink: #201c1a;          /* negro suave, para titulares */
+  --color-text: #2b2724;         /* texto principal, gris carbón */
+  --color-text-soft: #6e6560;    /* texto secundario, más suave */
+  --color-line: rgba(32, 28, 26, 0.12); /* líneas finas / divisores */
   --color-white: #ffffff;
 
   /* Tipografía */
@@ -41,7 +41,7 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 16px;
-  color: var(--color-brown);
+  color: var(--color-text);
   background: var(--color-bone);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -78,25 +78,18 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.18em;
   font-size: 0.72rem;
   font-weight: 500;
-  color: var(--color-terracotta-dark);
+  color: var(--color-crimson-dark);
   margin: 0 0 1.25em;
 }
 
 .center { text-align: center; }
 .section-lead {
   max-width: 560px;
-  color: var(--color-brown-soft);
+  color: var(--color-text-soft);
   font-weight: 300;
   font-size: 1.05rem;
 }
 .center.section-lead { margin-left: auto; margin-right: auto; }
-
-.section-heading {
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: calc(var(--section-pad) * 0.35);
-}
 
 /* ---------- Botones ---------- */
 .btn {
@@ -114,11 +107,11 @@ p { margin: 0 0 1em; }
 }
 
 .btn-primary {
-  background: var(--color-terracotta);
-  border-color: var(--color-terracotta);
+  background: var(--color-crimson);
+  border-color: var(--color-crimson);
   color: var(--color-white);
 }
-.btn-primary:hover { background: var(--color-terracotta-dark); border-color: var(--color-terracotta-dark); }
+.btn-primary:hover { background: var(--color-crimson-dark); border-color: var(--color-crimson-dark); }
 
 .btn-outline {
   background: transparent;
@@ -127,15 +120,12 @@ p { margin: 0 0 1em; }
 }
 .btn-outline:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--color-white); }
 
-/* variante para botones sobre fondo claro (ej. formulario de contacto) */
-.btn-primary.on-light { }
-
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 246, 241, 0.94);
+  background: rgba(250, 246, 242, 0.94);
   backdrop-filter: saturate(160%) blur(10px);
   border-bottom: 1px solid var(--color-line);
 }
@@ -168,7 +158,7 @@ p { margin: 0 0 1em; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-brown-soft);
+  color: var(--color-text-soft);
   position: relative;
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
@@ -176,8 +166,13 @@ p { margin: 0 0 1em; }
 }
 
 .nav a:hover {
-  color: var(--color-terracotta-dark);
-  border-color: var(--color-terracotta);
+  color: var(--color-crimson-dark);
+  border-color: var(--color-crimson);
+}
+
+.nav a[aria-current="page"] {
+  color: var(--color-crimson-dark);
+  border-color: var(--color-crimson);
 }
 
 .nav-toggle {
@@ -201,7 +196,7 @@ p { margin: 0 0 1em; }
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero (portada) ---------- */
 .hero {
   position: relative;
   min-height: 82vh;
@@ -223,7 +218,7 @@ p { margin: 0 0 1em; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(43, 29, 20, 0.05) 0%, rgba(43, 29, 20, 0.2) 55%, rgba(43, 29, 20, 0.62) 100%);
+  background: linear-gradient(180deg, rgba(32, 28, 26, 0.05) 0%, rgba(32, 28, 26, 0.2) 55%, rgba(32, 28, 26, 0.66) 100%);
 }
 
 .hero-content {
@@ -285,57 +280,96 @@ p { margin: 0 0 1em; }
   margin-bottom: 0.7em;
 }
 .about-text p {
-  color: var(--color-brown-soft);
+  color: var(--color-text-soft);
   max-width: 50ch;
   font-weight: 300;
 }
-.about-text p strong { color: var(--color-brown); font-weight: 500; }
+.about-text p strong { color: var(--color-text); font-weight: 500; }
 
-/* ---------- Galería ---------- */
-.gallery {
+/* ---------- Colecciones (directorio de categorías, en Inicio) ---------- */
+.collections {
   padding: var(--section-pad) 0;
   background: var(--color-bone);
 }
 
-.gallery h2 {
+.collections h2 {
   font-weight: 400;
   font-size: clamp(1.9rem, 3.2vw, 2.6rem);
 }
 
-.gallery-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: clamp(24px, 4vw, 48px);
-  margin-top: 56px;
-  border-bottom: 1px solid var(--color-line);
-}
-
-.gallery-tab {
-  font-family: var(--font-body);
-  font-size: 0.76rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-brown-soft);
-  background: none;
-  border: none;
-  border-bottom: 1px solid transparent;
-  padding: 0 0 18px;
-  margin-bottom: -1px;
-  cursor: pointer;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.gallery-tab:hover { color: var(--color-terracotta-dark); }
-
-.gallery-tab.is-active {
-  color: var(--color-terracotta-dark);
-  border-color: var(--color-terracotta);
-}
-
-.gallery-grid {
+.collections-grid {
   margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 32px;
+  row-gap: 56px;
+}
+
+.collection-item {
+  display: block;
+}
+
+.collection-item-media {
+  overflow: hidden;
+  background: var(--color-bone-dark);
+}
+
+.collection-item-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.collection-item:hover .collection-item-media img {
+  transform: scale(1.045);
+}
+
+.collection-item-name {
+  display: block;
+  margin-top: 18px;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  text-align: center;
+}
+
+/* ---------- Categoría: hero + cuadrícula de producto ---------- */
+.category-hero {
+  padding: 56px 0 0;
+}
+
+.category-hero-media {
+  overflow: hidden;
+}
+
+.category-hero-media img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+.category-intro {
+  max-width: 640px;
+  margin: 44px auto 0;
+  text-align: center;
+}
+
+.category-intro h1 {
+  font-weight: 400;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+}
+
+.category-intro .section-lead { margin-left: auto; margin-right: auto; }
+
+.product-section {
+  padding: var(--section-pad) 0;
+}
+
+/* ---------- Cuadrícula de producto (compartida: colecciones y categorías) ---------- */
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
@@ -375,13 +409,13 @@ p { margin: 0 0 1em; }
   font-style: italic;
   font-weight: 400;
   font-size: 0.98rem;
-  color: var(--color-brown);
+  color: var(--color-text);
 }
 
 .piece-price {
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--color-terracotta-dark);
+  color: var(--color-crimson-dark);
   white-space: nowrap;
 }
 
@@ -422,10 +456,10 @@ p { margin: 0 0 1em; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-terracotta-dark);
+  color: var(--color-crimson-dark);
 }
 
-.contact-list a:hover { color: var(--color-terracotta); }
+.contact-list a:hover { color: var(--color-crimson); }
 
 .contact-form-wrap {
   border: 1px solid var(--color-line);
@@ -441,7 +475,7 @@ p { margin: 0 0 1em; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-brown-soft);
+  color: var(--color-text-soft);
 }
 
 .form-field input,
@@ -453,7 +487,7 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--color-line);
   border-radius: 0;
   background: transparent;
-  color: var(--color-brown);
+  color: var(--color-text);
   resize: vertical;
   transition: border-color 0.2s ease;
 }
@@ -461,7 +495,7 @@ p { margin: 0 0 1em; }
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: var(--color-terracotta);
+  border-color: var(--color-crimson);
 }
 
 .contact-form .btn {
@@ -470,12 +504,12 @@ p { margin: 0 0 1em; }
   border-color: var(--color-ink);
   color: var(--color-white);
 }
-.contact-form .btn:hover { background: var(--color-terracotta-dark); border-color: var(--color-terracotta-dark); }
+.contact-form .btn:hover { background: var(--color-crimson-dark); border-color: var(--color-crimson-dark); }
 
 .form-note {
   margin: 0;
   font-size: 0.85rem;
-  color: var(--color-terracotta-dark);
+  color: var(--color-crimson-dark);
   min-height: 1.2em;
 }
 
@@ -497,7 +531,7 @@ p { margin: 0 0 1em; }
 .footer-brand .logo { color: var(--color-bone); }
 .footer-brand p {
   margin: 10px 0 0;
-  color: rgba(250, 246, 241, 0.55);
+  color: rgba(250, 246, 242, 0.55);
   font-size: 0.85rem;
   font-weight: 300;
 }
@@ -514,15 +548,15 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.1em;
   color: var(--color-bone-dark);
 }
-.footer-social a:hover { color: var(--color-clay); }
+.footer-social a:hover { color: var(--color-crimson-soft); }
 
 .footer-copy {
   width: 100%;
   margin: 40px 0 0;
   padding-top: 28px;
-  border-top: 1px solid rgba(250, 246, 241, 0.12);
+  border-top: 1px solid rgba(250, 246, 242, 0.12);
   font-size: 0.78rem;
-  color: rgba(250, 246, 241, 0.45);
+  color: rgba(250, 246, 242, 0.45);
   text-align: center;
 }
 
@@ -560,6 +594,9 @@ p { margin: 0 0 1em; }
   .about-media { order: -1; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .collections-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .category-hero-media img { aspect-ratio: 4 / 3; }
 }
 
 @media (max-width: 640px) {
@@ -572,6 +609,9 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 520px) {
   .gallery-grid { grid-template-columns: 1fr; row-gap: 48px; }
+  .collections-grid { grid-template-columns: 1fr; row-gap: 40px; }
+
+  .category-hero-media img { aspect-ratio: 1 / 1; }
 
   .footer-inner { text-align: center; justify-content: center; }
   .footer-social { justify-content: center; }

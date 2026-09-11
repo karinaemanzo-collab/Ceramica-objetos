@@ -26,13 +26,13 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="siteNav">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre Mí</a>
-        <a href="#galeria-pipas" data-gallery-category="pipas">Pipas</a>
-        <a href="#galeria-tazas" data-gallery-category="tazas">Tazas</a>
-        <a href="#galeria-shotglasses" data-gallery-category="shotglasses">Shotglasses</a>
-        <a href="#galeria-ceniceros" data-gallery-category="ceniceros">Ceniceros</a>
-        <a href="#contacto">Contacto</a>
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="index.html#sobre-mi">Sobre Mí</a>
+        <a href="pipas.html">Pipas</a>
+        <a href="ceniceros.html">Ceniceros</a>
+        <a href="tazas.html">Tazas</a>
+        <a href="shotglasses.html">Shotglasses</a>
+        <a href="index.html#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -56,7 +56,7 @@
           de cerámica con materiales de nuestra propia tierra.
         </p>
         <div class="hero-actions">
-          <a href="#galeria" class="btn btn-primary">Ver la galería</a>
+          <a href="#colecciones" class="btn btn-primary">Ver colecciones</a>
           <a href="#contacto" class="btn btn-outline">Cómo comprar</a>
         </div>
       </div>
@@ -92,190 +92,41 @@
       </div>
     </section>
 
-    <!-- ======================= GALERÍA ======================= -->
-    <section id="galeria" class="gallery">
+    <!-- ======================= COLECCIONES (directorio de categorías) ======================= -->
+    <!-- Cada categoría tiene su propia página (ver pipas.html, ceniceros.html, tazas.html, shotglasses.html) -->
+    <section id="colecciones" class="collections">
       <div class="container">
         <p class="eyebrow center">Piezas</p>
-        <h2 class="center">Galería</h2>
+        <h2 class="center">Nuestras colecciones</h2>
         <p class="section-lead center">
-          Una muestra de piezas hechas a mano. Cada pieza es única y las cantidades son limitadas.
+          Explora por categoría. Cada pieza es única, hecha a mano una a la vez.
         </p>
 
-        <!--
-          Sub-navegación entre categorías de la galería.
-          NOTA: el orden y los "data-target" deben coincidir con el id de cada
-          .gallery-category de abajo (ej. data-target="tazas" -> id="gallery-tazas").
-        -->
-        <div class="gallery-tabs" role="tablist" aria-label="Categorías de la galería">
-          <button type="button" class="gallery-tab is-active" data-target="pipas" role="tab" aria-selected="true">Pipas</button>
-          <button type="button" class="gallery-tab" data-target="tazas" role="tab" aria-selected="false">Tazas</button>
-          <button type="button" class="gallery-tab" data-target="shotglasses" role="tab" aria-selected="false">Shotglasses</button>
-          <button type="button" class="gallery-tab" data-target="ceniceros" role="tab" aria-selected="false">Ceniceros</button>
-        </div>
-
-        <!--
-          Cada pieza muestra su nombre en texto pequeño debajo de la foto.
-          REEMPLAZAR/AGREGAR: para mostrar un precio, descomenta y edita el
-          <span class="piece-price"> de cualquier figcaption (se deja oculto
-          por defecto para no publicar precios de muestra).
-        -->
-
-        <!-- ---- Categoría: Pipas ---- -->
-        <!-- Fotos reales del taller, ajustadas y recortadas a la misma proporción cuadrada -->
-        <div class="gallery-category is-active" id="gallery-pipas" role="tabpanel">
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/pipas/pipa-1.jpg" alt="Pipa de cerámica hecha a mano, esmaltado verde oliva y negro" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Pipa esmaltada, verde oliva</span>
-                <!-- <span class="piece-price">$35</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/pipas/pipa-2.jpg" alt="Pipa de cerámica hecha a mano, esmaltado azul grisáceo" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Pipa esmaltada, azul grisáceo</span>
-                <!-- <span class="piece-price">$35</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/pipas/pipa-3.jpg" alt="Pipa de cerámica hecha a mano, esmaltado negro azulado" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Pipa esmaltada, negro azulado</span>
-                <!-- <span class="piece-price">$35</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/pipas/pipa-4.jpg" alt="Pipa de cerámica hecha a mano, esmaltado en tonos tierra" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Pipa esmaltada, tonos tierra</span>
-                <!-- <span class="piece-price">$35</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/pipas/pipa-5.jpg" alt="Pipa de cerámica hecha a mano, acabado blanco mate" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Pipa acabado blanco mate</span>
-                <!-- <span class="piece-price">$35</span> -->
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <!-- ---- Categoría: Tazas ---- -->
-        <!--
-          REEMPLAZAR: placeholders temporales. Cuando tengas las fotos reales de
-          tazas, sigue el mismo patrón que la categoría "Pipas" de arriba
-          (fotos cuadradas, mismo tamaño aprox., fondo neutro).
-        -->
-        <div class="gallery-category" id="gallery-tazas" role="tabpanel" hidden>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/taza-1.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Taza artesanal</span>
-                <!-- <span class="piece-price">$28</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/taza-2.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Taza artesanal</span>
-                <!-- <span class="piece-price">$28</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/taza-3.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Taza artesanal</span>
-                <!-- <span class="piece-price">$28</span> -->
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <!-- ---- Categoría: Shotglasses ---- -->
-        <!-- REEMPLAZAR: placeholders temporales, mismo patrón que "Pipas" -->
-        <div class="gallery-category" id="gallery-shotglasses" role="tabpanel" hidden>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/shot-1.svg" alt="Shotglass de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Shotglass artesanal</span>
-                <!-- <span class="piece-price">$20</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/shot-2.svg" alt="Shotglass de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Shotglass artesanal</span>
-                <!-- <span class="piece-price">$20</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/shot-3.svg" alt="Shotglass de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Shotglass artesanal</span>
-                <!-- <span class="piece-price">$20</span> -->
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <!-- ---- Categoría: Ceniceros ---- -->
-        <!-- REEMPLAZAR: placeholders temporales, mismo patrón que "Pipas" -->
-        <div class="gallery-category" id="gallery-ceniceros" role="tabpanel" hidden>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/cenicero-1.svg" alt="Cenicero de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Cenicero artesanal</span>
-                <!-- <span class="piece-price">$24</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/cenicero-2.svg" alt="Cenicero de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Cenicero artesanal</span>
-                <!-- <span class="piece-price">$24</span> -->
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-item-media">
-                <img src="assets/img/cenicero-3.svg" alt="Cenicero de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              </div>
-              <figcaption>
-                <span class="piece-name">Cenicero artesanal</span>
-                <!-- <span class="piece-price">$24</span> -->
-              </figcaption>
-            </figure>
-          </div>
+        <div class="collections-grid">
+          <a class="collection-item" href="pipas.html">
+            <div class="collection-item-media">
+              <img src="assets/img/pipas/pipa-1.jpg" alt="Colección de pipas de cerámica hechas a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Pipas</span>
+          </a>
+          <a class="collection-item" href="ceniceros.html">
+            <div class="collection-item-media">
+              <img src="assets/img/cenicero-1.svg" alt="Colección de ceniceros de cerámica hechos a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Ceniceros</span>
+          </a>
+          <a class="collection-item" href="tazas.html">
+            <div class="collection-item-media">
+              <img src="assets/img/taza-1.svg" alt="Colección de tazas de cerámica hechas a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Tazas</span>
+          </a>
+          <a class="collection-item" href="shotglasses.html">
+            <div class="collection-item-media">
+              <img src="assets/img/shot-1.svg" alt="Colección de shotglasses de cerámica hechos a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Shotglasses</span>
+          </a>
         </div>
       </div>
     </section>
