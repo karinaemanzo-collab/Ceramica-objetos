@@ -1,32 +1,47 @@
 # Cerámica Objetos
 
-Sitio web de una sola página para **Cerámica Objetos**, negocio de piezas de
+Sitio web multi-página para **Cerámica Objetos**, negocio de piezas de
 cerámica hecha a mano en Puerto Rico, vertiente de **Proyecto Antillana**.
+Diseño editorial y minimalista, con paleta crimson red + off-white.
 
 Sitio estático (HTML/CSS/JS puro, sin frameworks ni build step) pensado para
-publicarse con GitHub Pages.
+publicarse con GitHub Pages. Cada categoría de producto tiene su propia
+página (estructura de navegación inspirada en catálogos de una página por
+categoría, sin copiar el diseño visual de ninguna marca en particular).
 
 ## Estructura
 
 ```
-index.html          Página principal (todas las secciones)
-css/styles.css       Estilos (paleta de colores, tipografía, responsive)
-js/main.js           Menú móvil y mensaje del formulario de contacto
-assets/img/          Imágenes (placeholders a reemplazar por fotos reales)
+index.html            Inicio: hero, Sobre Mí, directorio de colecciones, Contacto
+pipas.html             Página de la categoría Pipas
+ceniceros.html          Página de la categoría Ceniceros
+tazas.html              Página de la categoría Tazas
+shotglasses.html        Página de la categoría Shotglasses
+css/styles.css          Estilos (paleta de colores, tipografía, responsive)
+js/main.js              Menú móvil y mensaje del formulario de contacto
+assets/img/             Imágenes (placeholders a reemplazar por fotos reales)
+assets/img/pipas/       Fotos reales de la categoría Pipas
 ```
+
+Las 4 páginas de categoría comparten la misma estructura: una foto grande
+destacada arriba (hero de la categoría) y debajo una cuadrícula de piezas,
+cada una con su nombre y un espacio para el precio.
 
 ## Qué reemplazar antes de publicar
 
-Busca los comentarios `REEMPLAZAR` en `index.html` para encontrar:
+Busca los comentarios `REEMPLAZAR` en cada archivo `.html` para encontrar:
 
-- **Imágenes**: cambia los archivos en `assets/img/` (`hero.svg`,
-  `sobre-mi.svg`, `pieza-1.svg` a `pieza-6.svg`) por fotos reales. Puedes
-  mantener los mismos nombres de archivo (usando `.jpg`/`.webp` y
-  actualizando la extensión en `index.html`) o usar nombres nuevos.
-- **Textos**: el eslogan del hero, la historia en "Sobre mí" y los pies de
-  foto de la galería.
+- **Imágenes de Ceniceros, Tazas y Shotglasses**: estas tres categorías
+  todavía usan placeholders (`assets/img/cenicero-*.svg`, `taza-*.svg`,
+  `shot-*.svg`). Reemplázalas por fotos reales siguiendo el mismo patrón
+  que ya tiene `pipas.html` con las fotos en `assets/img/pipas/`.
+- **Precios**: cada pieza tiene un `<span class="piece-price">$XX</span>`
+  de marcador. Edita el texto con el precio real de cada una.
+- **Textos**: el eslogan del hero, la historia en "Sobre mí" y la
+  descripción corta de cada categoría.
 - **Información de contacto**: usuario de Instagram, número de WhatsApp y
-  correo electrónico (aparecen en la sección de contacto y en el footer).
+  correo electrónico (aparecen en `index.html#contacto` y en el footer de
+  cada página).
 - **Formulario de contacto**: es HTML estático, no envía correos por sí
   solo. Para recibir los mensajes, crea una cuenta gratuita en
   [Formspree](https://formspree.io) o [Getform](https://getform.io) y

@@ -6,15 +6,15 @@
   <title>Cerámica Objetos | Piezas de cerámica hecha a mano en Puerto Rico</title>
   <meta name="description" content="Cerámica Objetos: piezas de cerámica hecha a mano en Bayamón, Puerto Rico, vertiente de Proyecto Antillana y su trabajo con arcilla local.">
 
-  <!-- Tipografía: Playfair Display para títulos, Jost para texto general -->
+  <!-- Tipografía: Fraunces (serif editorial, delicada) para títulos, Inter (sans limpio) para texto general -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- REEMPLAZAR: favicon del negocio. Puedes generar uno en https://realfavicongenerator.net/ -->
-  <link rel="icon" type="image/svg+xml" href="assets/img/pieza-1.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
 <body>
 
@@ -26,10 +26,13 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="siteNav">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="index.html#sobre-mi">Sobre Mí</a>
+        <a href="pipas.html">Pipas</a>
+        <a href="ceniceros.html">Ceniceros</a>
+        <a href="tazas.html">Tazas</a>
+        <a href="shotglasses.html">Shotglasses</a>
+        <a href="index.html#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -53,7 +56,7 @@
           de cerámica con materiales de nuestra propia tierra.
         </p>
         <div class="hero-actions">
-          <a href="#galeria" class="btn btn-primary">Ver la galería</a>
+          <a href="#colecciones" class="btn btn-primary">Ver colecciones</a>
           <a href="#contacto" class="btn btn-outline">Cómo comprar</a>
         </div>
       </div>
@@ -89,45 +92,41 @@
       </div>
     </section>
 
-    <!-- ======================= GALERÍA ======================= -->
-    <section id="galeria" class="gallery">
+    <!-- ======================= COLECCIONES (directorio de categorías) ======================= -->
+    <!-- Cada categoría tiene su propia página (ver pipas.html, ceniceros.html, tazas.html, shotglasses.html) -->
+    <section id="colecciones" class="collections">
       <div class="container">
         <p class="eyebrow center">Piezas</p>
-        <h2 class="center">Galería</h2>
+        <h2 class="center">Nuestras colecciones</h2>
         <p class="section-lead center">
-          Una muestra de piezas hechas a mano. Cada pieza es única y las cantidades son limitadas.
+          Explora por categoría. Cada pieza es única, hecha a mano una a la vez.
         </p>
 
-        <!--
-          REEMPLAZAR: cada <img> de esta cuadrícula por fotos reales de tus productos.
-          Sugerencia: fotos cuadradas (1:1), mismo tamaño aprox. (800x800px), fondo neutro.
-          También actualiza el texto alt y el título/precio de cada pieza si lo deseas mostrar.
-        -->
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-1.svg" alt="Pieza de cerámica hecha a mano 1" loading="lazy">
-            <figcaption>Vasija en terracota</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-2.svg" alt="Pieza de cerámica hecha a mano 2" loading="lazy">
-            <figcaption>Taza artesanal</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-3.svg" alt="Pieza de cerámica hecha a mano 3" loading="lazy">
-            <figcaption>Plato decorativo</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-4.svg" alt="Pieza de cerámica hecha a mano 4" loading="lazy">
-            <figcaption>Florero de arcilla local</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-5.svg" alt="Pieza de cerámica hecha a mano 5" loading="lazy">
-            <figcaption>Cuenco esmaltado</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="assets/img/pieza-6.svg" alt="Pieza de cerámica hecha a mano 6" loading="lazy">
-            <figcaption>Set de tazas</figcaption>
-          </figure>
+        <div class="collections-grid">
+          <a class="collection-item" href="pipas.html">
+            <div class="collection-item-media">
+              <img src="assets/img/pipas/pipas-colectivo.jpg" alt="Colección de pipas de cerámica hechas a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Pipas</span>
+          </a>
+          <a class="collection-item" href="ceniceros.html">
+            <div class="collection-item-media">
+              <img src="assets/img/ceniceros/cenicero-1.jpg" alt="Colección de ceniceros de cerámica hechos a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Ceniceros</span>
+          </a>
+          <a class="collection-item" href="tazas.html">
+            <div class="collection-item-media">
+              <img src="assets/img/tazas/taza-1.jpg" alt="Colección de tazas de cerámica hechas a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Tazas</span>
+          </a>
+          <a class="collection-item" href="shotglasses.html">
+            <div class="collection-item-media">
+              <img src="assets/img/shotglasses/shot-1.jpg" alt="Colección de shotglasses de cerámica hechos a mano" loading="lazy">
+            </div>
+            <span class="collection-item-name">Shotglasses</span>
+          </a>
         </div>
       </div>
     </section>

@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Formulario de contacto: mensaje de confirmación en pantalla.
-  // NOTA: el envío real del formulario depende del "action" configurado
-  // en index.html (ver comentario ahí sobre Formspree/Getform).
+  // Formulario de contacto (solo existe en index.html): mensaje de
+  // confirmación en pantalla. NOTA: el envío real depende del "action"
+  // configurado en el <form> (ver comentario ahí sobre Formspree/Getform).
   const form = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
 
