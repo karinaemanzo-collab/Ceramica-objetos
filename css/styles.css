@@ -9,11 +9,11 @@
 
 :root {
   /* Paleta de colores */
-  --color-bone: #faf6f2;         /* off-white, fondo principal (amplio) */
-  --color-bone-dark: #f1e6e3;    /* off-white más cálido, para acentos puntuales */
-  --color-crimson: #a01330;      /* crimson red, color principal de acento */
-  --color-crimson-dark: #7a0f25; /* crimson oscuro, hover/estados activos */
-  --color-crimson-soft: #c9425a; /* crimson claro, detalles suaves */
+  --color-bone: #faf7f2;         /* off-white, fondo principal (amplio) */
+  --color-bone-dark: #ebe8e3;    /* off-white más cálido, para acentos puntuales */
+  --color-crimson: #b23a48;      /* crimson red, color principal de acento */
+  --color-crimson-dark: #872c37; /* crimson oscuro, hover/estados activos */
+  --color-crimson-soft: #cf858e; /* crimson claro, detalles suaves */
   --color-ink: #201c1a;          /* negro suave, para titulares */
   --color-text: #2b2724;         /* texto principal, gris carbón */
   --color-text-soft: #6e6560;    /* texto secundario, más suave */
@@ -347,7 +347,7 @@ p { margin: 0 0 1em; }
 
 .category-hero-media img {
   width: 100%;
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
