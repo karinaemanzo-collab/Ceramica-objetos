@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (form && formNote) {
     form.addEventListener('submit', () => {
-      formNote.textContent = 'Enviando tu mensaje...';
+      const fallback = 'Enviando tu mensaje...';
+      formNote.textContent = (window.CO_I18N && window.CO_I18N.t('form.sending')) || fallback;
     });
   }
 });

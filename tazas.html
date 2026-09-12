@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-title="page.title.tazas">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +21,24 @@
       <a href="index.html" class="logo">
         <img src="assets/img/logo.png" alt="Cerámica Objetos" class="logo-img">
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" id="siteNav">
-        <a href="index.html">Inicio</a>
-        <a href="index.html#sobre-mi">Sobre Mí</a>
-        <a href="pipas.html">Pipas</a>
-        <a href="ceniceros.html">Ceniceros</a>
-        <a href="tazas.html" aria-current="page">Tazas</a>
-        <a href="shotglasses.html">Shotglasses</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav" id="siteNav">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="index.html#sobre-mi" data-i18n="nav.about">Sobre Mí</a>
+          <a href="pipas.html" data-i18n="nav.pipas">Pipas</a>
+          <a href="ceniceros.html" data-i18n="nav.ceniceros">Ceniceros</a>
+          <a href="tazas.html" aria-current="page" data-i18n="nav.tazas">Tazas</a>
+          <a href="shotglasses.html" data-i18n="nav.shotglasses">Shotglasses</a>
+          <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Selector de idioma / Language selector">
+          <button type="button" data-lang="es">ES</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -45,9 +51,9 @@
           <img src="assets/img/tazas/taza-1.jpg" alt="Taza de cerámica hecha a mano, esmaltado azul" loading="eager">
         </div>
         <div class="category-intro">
-          <p class="eyebrow">Colección</p>
-          <h1>Tazas</h1>
-          <p class="section-lead">
+          <p class="eyebrow" data-i18n="category.eyebrow">Colección</p>
+          <h1 data-i18n="nav.tazas">Tazas</h1>
+          <p class="section-lead" data-i18n="tazas.lead">
             Tazas de cerámica hechas a mano, pensadas para el uso diario: piezas
             simples, cálidas y duraderas.
           </p>
@@ -67,40 +73,40 @@
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/tazas/taza-1.jpg" alt="Taza de cerámica hecha a mano, esmaltado azul" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Taza Cobalto</span>
+              <span class="piece-name" data-i18n="tazas.item1.name">Taza Cobalto</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/tazas/taza-2.jpg" alt="Tazas de cerámica hechas a mano con asa, esmaltadas en morado y verde" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Taza Jade</span>
+              <span class="piece-name" data-i18n="tazas.item2.name">Taza Jade</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/taza-3.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Taza Terracota</span>
+              <span class="piece-name" data-i18n="tazas.item3.name">Taza Terracota</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/taza-4.svg" alt="Taza de cerámica hecha a mano (imagen provisional)" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Taza Arena</span>
+              <span class="piece-name" data-i18n="tazas.item4.name">Taza Arena</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
@@ -114,7 +120,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <p class="logo">Cerámica Objetos</p>
-        <p>Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
+        <p data-i18n="footer.tagline">Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
       </div>
 
       <!-- REEMPLAZAR: enlaces de redes sociales -->
@@ -124,10 +130,11 @@
         <li><a href="mailto:hola@ceramicaobjetos.com">Email</a></li>
       </ul>
 
-      <p class="footer-copy">&copy; <span id="year"></span> Cerámica Objetos. Todos los derechos reservados.</p>
+      <p class="footer-copy"><span data-i18n="footer.copyPrefix">&copy; </span><span id="year"></span><span data-i18n="footer.copySuffix"> Cerámica Objetos. Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

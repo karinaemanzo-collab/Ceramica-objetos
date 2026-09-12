@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-title="page.title.ceniceros">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +21,24 @@
       <a href="index.html" class="logo">
         <img src="assets/img/logo.png" alt="Cerámica Objetos" class="logo-img">
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" id="siteNav">
-        <a href="index.html">Inicio</a>
-        <a href="index.html#sobre-mi">Sobre Mí</a>
-        <a href="pipas.html">Pipas</a>
-        <a href="ceniceros.html" aria-current="page">Ceniceros</a>
-        <a href="tazas.html">Tazas</a>
-        <a href="shotglasses.html">Shotglasses</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav" id="siteNav">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="index.html#sobre-mi" data-i18n="nav.about">Sobre Mí</a>
+          <a href="pipas.html" data-i18n="nav.pipas">Pipas</a>
+          <a href="ceniceros.html" aria-current="page" data-i18n="nav.ceniceros">Ceniceros</a>
+          <a href="tazas.html" data-i18n="nav.tazas">Tazas</a>
+          <a href="shotglasses.html" data-i18n="nav.shotglasses">Shotglasses</a>
+          <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Selector de idioma / Language selector">
+          <button type="button" data-lang="es">ES</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -45,9 +51,9 @@
           <img src="assets/img/ceniceros/cenicero-1.jpg" alt="Colección de ceniceros de cerámica hechos a mano" loading="eager">
         </div>
         <div class="category-intro">
-          <p class="eyebrow">Colección</p>
-          <h1>Ceniceros</h1>
-          <p class="section-lead">
+          <p class="eyebrow" data-i18n="category.eyebrow">Colección</p>
+          <h1 data-i18n="nav.ceniceros">Ceniceros</h1>
+          <p class="section-lead" data-i18n="ceniceros.lead">
             Ceniceros de cerámica, moldeados a mano con la misma arcilla local que
             da forma a cada pieza del taller.
           </p>
@@ -67,40 +73,40 @@
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/ceniceros/cenicero-1.jpg" alt="Colección de ceniceros de cerámica hechos a mano" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Cenicero Arcilla</span>
+              <span class="piece-name" data-i18n="ceniceros.item1.name">Cenicero Arcilla</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/cenicero-2.svg" alt="Cenicero de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Cenicero Bruma</span>
+              <span class="piece-name" data-i18n="ceniceros.item2.name">Cenicero Bruma</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/cenicero-3.svg" alt="Cenicero de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Cenicero Cobre</span>
+              <span class="piece-name" data-i18n="ceniceros.item3.name">Cenicero Cobre</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/cenicero-4.svg" alt="Cenicero de cerámica hecho a mano (imagen provisional)" loading="lazy">
-              <span class="piece-status is-available">Disponible</span>
+              <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Cenicero Ceniza</span>
+              <span class="piece-name" data-i18n="ceniceros.item4.name">Cenicero Ceniza</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
@@ -114,7 +120,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <p class="logo">Cerámica Objetos</p>
-        <p>Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
+        <p data-i18n="footer.tagline">Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
       </div>
 
       <!-- REEMPLAZAR: enlaces de redes sociales -->
@@ -124,10 +130,11 @@
         <li><a href="mailto:hola@ceramicaobjetos.com">Email</a></li>
       </ul>
 
-      <p class="footer-copy">&copy; <span id="year"></span> Cerámica Objetos. Todos los derechos reservados.</p>
+      <p class="footer-copy"><span data-i18n="footer.copyPrefix">&copy; </span><span id="year"></span><span data-i18n="footer.copySuffix"> Cerámica Objetos. Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
