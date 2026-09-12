@@ -11,9 +11,9 @@
   /* Paleta de colores */
   --color-bone: #faf7f2;         /* off-white, fondo principal (amplio) */
   --color-bone-dark: #ebe8e3;    /* off-white más cálido, para acentos puntuales */
-  --color-crimson: #b23a48;      /* crimson red, color principal de acento */
-  --color-crimson-dark: #872c37; /* crimson oscuro, hover/estados activos */
-  --color-crimson-soft: #cf858e; /* crimson claro, detalles suaves */
+  --color-crimson: #a2392f;      /* crimson red extraído del logo, color principal de acento */
+  --color-crimson-dark: #7b2b24; /* crimson oscuro, hover/estados activos */
+  --color-crimson-soft: #c5847e; /* crimson claro, detalles suaves */
   --color-ink: #201c1a;          /* negro suave, para titulares */
   --color-text: #2b2724;         /* texto principal, gris carbón */
   --color-text-soft: #6e6560;    /* texto secundario, más suave */
@@ -139,12 +139,20 @@ p { margin: 0 0 1em; }
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-ink);
+}
+
+.logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -286,6 +294,31 @@ p { margin: 0 0 1em; }
 }
 .about-text p strong { color: var(--color-text); font-weight: 500; }
 
+/* Bloque de biografía corta pendiente de escribir: borde punteado bien
+   visible para que sea obvio que hay que reemplazar el texto */
+.bio-placeholder {
+  border: 1px dashed var(--color-crimson-soft);
+  background: var(--color-bone-dark);
+  padding: 20px 24px;
+  margin-bottom: 1.75em;
+  max-width: 50ch;
+}
+
+.bio-placeholder-label {
+  margin: 0 0 0.5em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-crimson-dark);
+}
+
+.bio-placeholder p:last-child {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-text-soft);
+}
+
 /* ---------- Colecciones (directorio de categorías, en Inicio) ---------- */
 .collections {
   padding: var(--section-pad) 0;
@@ -381,6 +414,7 @@ p { margin: 0 0 1em; }
 }
 
 .gallery-item-media {
+  position: relative;
   overflow: hidden;
   background: var(--color-bone-dark);
 }
@@ -389,11 +423,41 @@ p { margin: 0 0 1em; }
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
 .gallery-item:hover .gallery-item-media img {
   transform: scale(1.045);
+}
+
+/* Insignia de estado (Disponible / Agotado) sobre la foto */
+.piece-status {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4em 0.85em;
+  background: rgba(250, 247, 242, 0.92);
+  border: 1px solid var(--color-line);
+  color: var(--color-text-soft);
+}
+
+.piece-status.is-available {
+  color: var(--color-crimson-dark);
+  border-color: var(--color-crimson-soft);
+}
+
+.piece-status.is-sold-out {
+  color: var(--color-text-soft);
+}
+
+/* Agrega la clase "is-sold-out" al <figure class="gallery-item"> para atenuar la foto */
+.gallery-item.is-sold-out .gallery-item-media img {
+  opacity: 0.5;
+  filter: grayscale(0.4);
 }
 
 .gallery-item figcaption {
@@ -601,6 +665,8 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
+
+  .logo-img { height: 40px; }
 
   .hero-content { padding-top: 64px; padding-bottom: 64px; }
 
