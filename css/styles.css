@@ -348,44 +348,36 @@ p { margin: 0 0 1em; }
   font-size: clamp(1.9rem, 3.2vw, 2.6rem);
 }
 
-.collections-grid {
-  margin-top: 64px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 32px;
-  row-gap: 56px;
+/*
+  Directorio de colecciones: solo nombres de categoría (sin fotos), para
+  que la persona haga clic y vea las fotos en la página de esa categoría.
+*/
+.collections-list {
+  margin: 64px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  row-gap: 24px;
+  column-gap: clamp(28px, 5vw, 64px);
 }
 
-.collection-item {
-  display: block;
-}
-
-.collection-item-media {
-  overflow: hidden;
-  background: var(--color-bone-dark);
-}
-
-.collection-item-media img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: contain;
-  background: var(--color-bone-dark);
-  transition: transform 0.6s ease;
-}
-
-.collection-item:hover .collection-item-media img {
-  transform: scale(1.045);
-}
-
-.collection-item-name {
-  display: block;
-  margin-top: 18px;
+.collection-link {
   font-family: var(--font-heading);
   font-style: italic;
   font-weight: 400;
-  font-size: 1.05rem;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
   color: var(--color-ink);
-  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.collection-link:hover {
+  color: var(--color-crimson-dark);
+  border-color: var(--color-crimson);
 }
 
 /* ---------- Categoría: hero + cuadrícula de producto ---------- */

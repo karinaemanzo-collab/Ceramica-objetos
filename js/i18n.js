@@ -19,6 +19,7 @@
       'nav.pipas': 'Pipas',
       'nav.ceniceros': 'Ceniceros',
       'nav.tazas': 'Tazas',
+      'nav.platos': 'Platos',
       'nav.shotglasses': 'Shotglasses',
       'nav.contact': 'Contacto',
       'nav.toggleAria': 'Abrir menú',
@@ -72,18 +73,28 @@
       'ceniceros.item2.name': 'Cenicero Bruma',
       'ceniceros.item3.name': 'Cenicero Cobre',
       'ceniceros.item4.name': 'Cenicero Ceniza',
+      'ceniceros.item5.name': 'Cenicero Terracota',
 
       'tazas.lead': 'Tazas de cerámica hechas a mano, pensadas para el uso diario: piezas simples, cálidas y duraderas.',
       'tazas.item1.name': 'Taza Jade',
       'tazas.item2.name': 'Taza Cobalto',
       'tazas.item3.name': 'Taza Terracota',
       'tazas.item4.name': 'Taza Arena',
+      'tazas.item5.name': 'Taza Bruma',
+
+      'platos.lead': 'Platos de cerámica hechos a mano, pensados tanto para servir como para decorar: piezas únicas con esmaltes propios.',
+      'platos.item1.name': 'Plato Cobalto',
+      'platos.item2.name': 'Plato Bruma',
+      'platos.item3.name': 'Plato Terracota',
+      'platos.item4.name': 'Plato Arcilla',
+      'platos.item5.name': 'Plato Arena',
 
       'shotglasses.lead': 'Shotglasses de cerámica hechos a mano, piezas pequeñas con el mismo cuidado artesanal de siempre.',
       'shotglasses.item1.name': 'Shotglass Fiesta',
       'shotglasses.item2.name': 'Shotglass Ámbar',
       'shotglasses.item3.name': 'Shotglass Rubí',
       'shotglasses.item4.name': 'Shotglass Ónix',
+      'shotglasses.item5.name': 'Shotglass Bruma',
 
       'piece.status.available': 'Disponible',
       'piece.status.soldout': 'Agotado',
@@ -92,6 +103,7 @@
       'page.title.pipas': 'Pipas | Cerámica Objetos',
       'page.title.ceniceros': 'Ceniceros | Cerámica Objetos',
       'page.title.tazas': 'Tazas | Cerámica Objetos',
+      'page.title.platos': 'Platos | Cerámica Objetos',
       'page.title.shotglasses': 'Shotglasses | Cerámica Objetos'
     },
 
@@ -101,6 +113,7 @@
       'nav.pipas': 'Pipes',
       'nav.ceniceros': 'Ashtrays',
       'nav.tazas': 'Mugs',
+      'nav.platos': 'Plates',
       'nav.shotglasses': 'Shotglasses',
       'nav.contact': 'Contact',
       'nav.toggleAria': 'Open menu',
@@ -154,18 +167,28 @@
       'ceniceros.item2.name': 'Mist Ashtray',
       'ceniceros.item3.name': 'Copper Ashtray',
       'ceniceros.item4.name': 'Ash-Grey Ashtray',
+      'ceniceros.item5.name': 'Terracotta Ashtray',
 
       'tazas.lead': 'Handmade ceramic mugs, made for everyday use: simple, warm, and long-lasting pieces.',
       'tazas.item1.name': 'Jade Mug',
       'tazas.item2.name': 'Cobalt Mug',
       'tazas.item3.name': 'Terracotta Mug',
       'tazas.item4.name': 'Sand Mug',
+      'tazas.item5.name': 'Mist Mug',
+
+      'platos.lead': 'Handmade ceramic plates, made for serving as well as display: unique pieces with their own glazes.',
+      'platos.item1.name': 'Cobalt Plate',
+      'platos.item2.name': 'Mist Plate',
+      'platos.item3.name': 'Terracotta Plate',
+      'platos.item4.name': 'Clay Plate',
+      'platos.item5.name': 'Sand Plate',
 
       'shotglasses.lead': 'Handmade ceramic shotglasses, small pieces made with the same care as everything else.',
       'shotglasses.item1.name': 'Fiesta Shotglass',
       'shotglasses.item2.name': 'Amber Shotglass',
       'shotglasses.item3.name': 'Ruby Shotglass',
       'shotglasses.item4.name': 'Onyx Shotglass',
+      'shotglasses.item5.name': 'Mist Shotglass',
 
       'piece.status.available': 'Available',
       'piece.status.soldout': 'Sold Out',
@@ -174,6 +197,7 @@
       'page.title.pipas': 'Pipes | Cerámica Objetos',
       'page.title.ceniceros': 'Ashtrays | Cerámica Objetos',
       'page.title.tazas': 'Mugs | Cerámica Objetos',
+      'page.title.platos': 'Plates | Cerámica Objetos',
       'page.title.shotglasses': 'Shotglasses | Cerámica Objetos'
     }
   };

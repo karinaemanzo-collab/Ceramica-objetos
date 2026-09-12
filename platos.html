@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" data-i18n-title="page.title.pipas">
+<html lang="es" data-i18n-title="page.title.platos">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pipas | Cerámica Objetos</title>
-  <meta name="description" content="Pipas de cerámica hechas a mano por Cerámica Objetos en Bayamón, Puerto Rico.">
+  <title>Platos | Cerámica Objetos</title>
+  <meta name="description" content="Platos de cerámica hechos a mano por Cerámica Objetos en Bayamón, Puerto Rico.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +25,10 @@
         <nav class="nav" id="siteNav">
           <a href="index.html" data-i18n="nav.home">Inicio</a>
           <a href="index.html#sobre-mi" data-i18n="nav.about">Sobre Mí</a>
-          <a href="pipas.html" aria-current="page" data-i18n="nav.pipas">Pipas</a>
+          <a href="pipas.html" data-i18n="nav.pipas">Pipas</a>
           <a href="ceniceros.html" data-i18n="nav.ceniceros">Ceniceros</a>
           <a href="tazas.html" data-i18n="nav.tazas">Tazas</a>
-          <a href="platos.html" data-i18n="nav.platos">Platos</a>
+          <a href="platos.html" aria-current="page" data-i18n="nav.platos">Platos</a>
           <a href="shotglasses.html" data-i18n="nav.shotglasses">Shotglasses</a>
           <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
         </nav>
@@ -45,18 +45,18 @@
 
   <main>
     <!-- ======================= HERO DE CATEGORÍA ======================= -->
+    <!-- Foto real, ajustada y recortada; también usada como primera pieza de la cuadrícula -->
     <section class="category-hero">
       <div class="container">
         <div class="category-hero-media">
-          <!-- Foto real del taller: vista de conjunto de la colección completa -->
-          <img src="assets/img/pipas/pipas-colectivo.jpg" alt="Colección completa de pipas de cerámica hechas a mano" loading="eager">
+          <img src="assets/img/platos/plato-1.jpg" alt="Plato de cerámica hecho a mano, esmaltado azul" loading="eager">
         </div>
         <div class="category-intro">
           <p class="eyebrow" data-i18n="category.eyebrow">Colección</p>
-          <h1 data-i18n="nav.pipas">Pipas</h1>
-          <p class="section-lead" data-i18n="pipas.lead">
-            Pipas de cerámica hechas a mano, esmaltadas y cocidas una a una en el taller.
-            Ninguna pieza es idéntica a la otra.
+          <h1 data-i18n="nav.platos">Platos</h1>
+          <p class="section-lead" data-i18n="platos.lead">
+            Platos de cerámica hechos a mano, pensados tanto para servir como para
+            decorar: piezas únicas con esmaltes propios.
           </p>
         </div>
       </div>
@@ -64,67 +64,60 @@
 
     <!-- ======================= CUADRÍCULA DE PRODUCTO ======================= -->
     <!--
-      Fotos reales del taller, ajustadas y recortadas a la misma proporción cuadrada.
-      REEMPLAZAR/AGREGAR:
-      - Nombres de pieza (<span class="piece-name">): son nombres poéticos de
-        muestra, cámbialos por los que prefieras para cada pieza.
-      - Precio (<span class="piece-price">): edita "$XX" con el precio real.
-      - Estado: por defecto cada pieza está marcada "Disponible". Para marcar
-        una como agotada, cambia <span class="piece-status is-available"> a
-        <span class="piece-status is-sold-out"> con el texto "Agotado", y
-        agrega la clase "is-sold-out" al <figure class="gallery-item"> (esto
-        atenúa la foto automáticamente).
+      Pieza 1: foto real (misma que el hero). Piezas 2-5: placeholders temporales.
+      REEMPLAZAR: sigue el mismo patrón que "Pipas" (pipas.html) cuando tengas más fotos reales.
+      Nombres, precios y estado son de muestra — edítalos como en pipas.html.
     -->
     <section class="product-section">
       <div class="container">
         <div class="gallery-grid">
           <figure class="gallery-item">
             <div class="gallery-item-media">
-              <img src="assets/img/pipas/pipa-1.jpg" alt="Pipa de cerámica hecha a mano, esmaltado verde oliva y negro" loading="lazy">
+              <img src="assets/img/platos/plato-1.jpg" alt="Plato de cerámica hecho a mano, esmaltado azul" loading="lazy">
               <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name" data-i18n="pipas.item1.name">Pipa Terracota</span>
+              <span class="piece-name" data-i18n="platos.item1.name">Plato Cobalto</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
-              <img src="assets/img/pipas/pipa-2.jpg" alt="Pipa de cerámica hecha a mano, esmaltado azul grisáceo" loading="lazy">
+              <img src="assets/img/plato-2.svg" alt="Plato de cerámica hecho a mano (imagen provisional)" loading="lazy">
               <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name" data-i18n="pipas.item2.name">Pipa Bruma</span>
+              <span class="piece-name" data-i18n="platos.item2.name">Plato Bruma</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
-              <img src="assets/img/pipas/pipa-3.jpg" alt="Pipa de cerámica hecha a mano, esmaltado negro azulado" loading="lazy">
+              <img src="assets/img/plato-3.svg" alt="Plato de cerámica hecho a mano (imagen provisional)" loading="lazy">
               <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name" data-i18n="pipas.item3.name">Pipa Medianoche</span>
+              <span class="piece-name" data-i18n="platos.item3.name">Plato Terracota</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
-              <img src="assets/img/pipas/pipa-4.jpg" alt="Pipa de cerámica hecha a mano, esmaltado en tonos tierra" loading="lazy">
+              <img src="assets/img/plato-4.svg" alt="Plato de cerámica hecho a mano (imagen provisional)" loading="lazy">
               <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name" data-i18n="pipas.item4.name">Pipa Barro</span>
+              <span class="piece-name" data-i18n="platos.item4.name">Plato Arcilla</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
-              <img src="assets/img/pipas/pipa-5.jpg" alt="Pipa de cerámica hecha a mano, acabado blanco mate" loading="lazy">
+              <img src="assets/img/plato-5.svg" alt="Plato de cerámica hecho a mano (imagen provisional)" loading="lazy">
               <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name" data-i18n="pipas.item5.name">Pipa Hueso</span>
+              <span class="piece-name" data-i18n="platos.item5.name">Plato Arena</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
