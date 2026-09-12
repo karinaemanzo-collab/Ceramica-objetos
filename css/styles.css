@@ -672,7 +672,6 @@ p { margin: 0 0 1em; }
   .about-media { order: -1; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .collections-grid { grid-template-columns: repeat(2, 1fr); }
 
   .category-hero-media img { aspect-ratio: 4 / 3; }
 }
@@ -689,7 +688,6 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 520px) {
   .gallery-grid { grid-template-columns: 1fr; row-gap: 48px; }
-  .collections-grid { grid-template-columns: 1fr; row-gap: 40px; }
 
   .category-hero-media img { aspect-ratio: 1 / 1; }
 
