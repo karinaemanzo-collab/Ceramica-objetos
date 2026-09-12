@@ -24,6 +24,7 @@
       'nav.toggleAria': 'Abrir menú',
 
       'hero.eyebrow': 'Hecho a mano en Puerto Rico',
+      'hero.subtag': 'Objetos hermosos, hechos a mano, para el día a día',
       'hero.tagline': 'Piezas de cerámica hecha a mano en Puerto Rico, moldeadas con paciencia y arcilla local.',
       'hero.cta.collections': 'Ver colecciones',
       'hero.cta.contact': 'Cómo comprar',
@@ -73,8 +74,8 @@
       'ceniceros.item4.name': 'Cenicero Ceniza',
 
       'tazas.lead': 'Tazas de cerámica hechas a mano, pensadas para el uso diario: piezas simples, cálidas y duraderas.',
-      'tazas.item1.name': 'Taza Cobalto',
-      'tazas.item2.name': 'Taza Jade',
+      'tazas.item1.name': 'Taza Jade',
+      'tazas.item2.name': 'Taza Cobalto',
       'tazas.item3.name': 'Taza Terracota',
       'tazas.item4.name': 'Taza Arena',
 
@@ -105,6 +106,7 @@
       'nav.toggleAria': 'Open menu',
 
       'hero.eyebrow': 'Handmade in Puerto Rico',
+      'hero.subtag': 'Hand built beautiful objects for everyday life',
       'hero.tagline': 'Handmade ceramic pieces from Puerto Rico, shaped with patience and local clay.',
       'hero.cta.collections': 'View collections',
       'hero.cta.contact': 'How to buy',
@@ -154,8 +156,8 @@
       'ceniceros.item4.name': 'Ash-Grey Ashtray',
 
       'tazas.lead': 'Handmade ceramic mugs, made for everyday use: simple, warm, and long-lasting pieces.',
-      'tazas.item1.name': 'Cobalt Mug',
-      'tazas.item2.name': 'Jade Mug',
+      'tazas.item1.name': 'Jade Mug',
+      'tazas.item2.name': 'Cobalt Mug',
       'tazas.item3.name': 'Terracotta Mug',
       'tazas.item4.name': 'Sand Mug',
 
