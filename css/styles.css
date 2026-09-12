@@ -278,6 +278,16 @@ p { margin: 0 0 1em; }
   margin: 0 auto;
 }
 
+.hero-subtag {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--color-crimson-dark);
+  margin: 0 0 1.6em;
+}
+
 .hero-tagline {
   font-weight: 300;
   font-size: 1.05rem;
@@ -358,7 +368,8 @@ p { margin: 0 0 1em; }
 .collection-item-media img {
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-bone-dark);
   transition: transform 0.6s ease;
 }
 
@@ -384,12 +395,14 @@ p { margin: 0 0 1em; }
 
 .category-hero-media {
   overflow: hidden;
+  background: var(--color-bone-dark);
 }
 
 .category-hero-media img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-bone-dark);
 }
 
 .category-intro {
@@ -430,7 +443,8 @@ p { margin: 0 0 1em; }
 .gallery-item-media img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-bone-dark);
   transition: transform 0.6s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
