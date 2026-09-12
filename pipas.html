@@ -11,14 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
 
   <!-- ======================= NAV ======================= -->
   <header class="site-header">
     <div class="container nav-inner">
-      <a href="index.html" class="logo">Cerámica Objetos</a>
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="Cerámica Objetos" class="logo-img">
+      </a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -56,8 +58,15 @@
     <!-- ======================= CUADRÍCULA DE PRODUCTO ======================= -->
     <!--
       Fotos reales del taller, ajustadas y recortadas a la misma proporción cuadrada.
-      REEMPLAZAR/AGREGAR: edita el texto de cada <span class="piece-price"> cuando
-      tengas el precio definitivo de cada pieza.
+      REEMPLAZAR/AGREGAR:
+      - Nombres de pieza (<span class="piece-name">): son nombres poéticos de
+        muestra, cámbialos por los que prefieras para cada pieza.
+      - Precio (<span class="piece-price">): edita "$XX" con el precio real.
+      - Estado: por defecto cada pieza está marcada "Disponible". Para marcar
+        una como agotada, cambia <span class="piece-status is-available"> a
+        <span class="piece-status is-sold-out"> con el texto "Agotado", y
+        agrega la clase "is-sold-out" al <figure class="gallery-item"> (esto
+        atenúa la foto automáticamente).
     -->
     <section class="product-section">
       <div class="container">
@@ -65,45 +74,50 @@
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/pipas/pipa-1.jpg" alt="Pipa de cerámica hecha a mano, esmaltado verde oliva y negro" loading="lazy">
+              <span class="piece-status is-available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Pipa esmaltada, verde oliva</span>
+              <span class="piece-name">Pipa Terracota</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/pipas/pipa-2.jpg" alt="Pipa de cerámica hecha a mano, esmaltado azul grisáceo" loading="lazy">
+              <span class="piece-status is-available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Pipa esmaltada, azul grisáceo</span>
+              <span class="piece-name">Pipa Bruma</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/pipas/pipa-3.jpg" alt="Pipa de cerámica hecha a mano, esmaltado negro azulado" loading="lazy">
+              <span class="piece-status is-available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Pipa esmaltada, negro azulado</span>
+              <span class="piece-name">Pipa Medianoche</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/pipas/pipa-4.jpg" alt="Pipa de cerámica hecha a mano, esmaltado en tonos tierra" loading="lazy">
+              <span class="piece-status is-available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Pipa esmaltada, tonos tierra</span>
+              <span class="piece-name">Pipa Barro</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-item-media">
               <img src="assets/img/pipas/pipa-5.jpg" alt="Pipa de cerámica hecha a mano, acabado blanco mate" loading="lazy">
+              <span class="piece-status is-available">Disponible</span>
             </div>
             <figcaption>
-              <span class="piece-name">Pipa acabado blanco mate</span>
+              <span class="piece-name">Pipa Hueso</span>
               <span class="piece-price">$XX</span>
             </figcaption>
           </figure>
