@@ -26,7 +26,6 @@
 
       'hero.eyebrow': 'Hecho a mano en Puerto Rico',
       'hero.subtag': 'Objetos hermosos, hechos a mano, para el día a día',
-      'hero.tagline': 'Piezas de cerámica hecha a mano en Puerto Rico, moldeadas con paciencia y arcilla local.',
       'hero.cta.collections': 'Ver colecciones',
       'hero.cta.contact': 'Cómo comprar',
 
@@ -120,7 +119,6 @@
 
       'hero.eyebrow': 'Handmade in Puerto Rico',
       'hero.subtag': 'Hand built beautiful objects for everyday life',
-      'hero.tagline': 'Handmade ceramic pieces from Puerto Rico, shaped with patience and local clay.',
       'hero.cta.collections': 'View collections',
       'hero.cta.contact': 'How to buy',
 
