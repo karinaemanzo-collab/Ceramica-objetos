@@ -288,16 +288,6 @@ p { margin: 0 0 1em; }
   margin: 0 0 1.6em;
 }
 
-.hero-tagline {
-  font-weight: 300;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--color-text-soft);
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
