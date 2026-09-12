@@ -40,7 +40,7 @@
         '<p>¡Gracias por estar aquí!</p>',
 
       'collections.eyebrow': 'Piezas',
-      'collections.heading': 'Nuestras colecciones',
+      'collections.heading': 'Colecciones',
       'collections.lead': 'Explora por categoría. Cada pieza es única, hecha a mano una a la vez.',
 
       'contact.eyebrow': 'Cómo comprar',
@@ -134,7 +134,7 @@
         '<p>Thank you for being here!</p>',
 
       'collections.eyebrow': 'Pieces',
-      'collections.heading': 'Our collections',
+      'collections.heading': 'Collections',
       'collections.lead': 'Browse by category. Every piece is unique, handmade one at a time.',
 
       'contact.eyebrow': 'How to buy',
