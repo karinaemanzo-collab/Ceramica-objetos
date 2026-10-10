@@ -20,27 +20,24 @@
   <!-- ======================= NAV ======================= -->
   <header class="site-header">
     <div class="container nav-inner">
-      <a href="index.html" class="logo">
+      <a href="#inicio" class="logo">
         <img src="assets/img/logo.png" alt="Cerámica Objetos" class="logo-img">
       </a>
       <div class="nav-right">
         <nav class="nav" id="siteNav">
-          <a href="tienda.html" data-i18n="nav.shop">Tienda</a>
-          <a href="historia.html" data-i18n="nav.history">Historia</a>
-          <a href="#pie-contacto" data-i18n="nav.contact">Contacto</a>
+          <a href="index.html" aria-current="page" data-i18n="nav.home">Inicio</a>
+          <a href="index.html#sobre-mi" data-i18n="nav.about">Sobre Mí</a>
+          <a href="pipas.html" data-i18n="nav.pipas">Pipas</a>
+          <a href="ceniceros.html" data-i18n="nav.ceniceros">Ceniceros</a>
+          <a href="tazas.html" data-i18n="nav.tazas">Tazas</a>
+          <a href="platos.html" data-i18n="nav.platos">Platos</a>
+          <a href="shotglasses.html" data-i18n="nav.shotglasses">Shotglasses</a>
+          <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
         </nav>
         <div class="lang-toggle" role="group" aria-label="Selector de idioma / Language selector">
           <button type="button" data-lang="es">ES</button>
           <button type="button" data-lang="en">EN</button>
         </div>
-        <a href="carrito.html" class="cart-link" data-i18n-aria-label="nav.cartAria" aria-label="Ver carrito">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.95L20 8H6" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="9" cy="21" r="1.4" fill="currentColor" stroke="none"/>
-            <circle cx="18" cy="21" r="1.4" fill="currentColor" stroke="none"/>
-          </svg>
-          <span class="cart-count" hidden>0</span>
-        </a>
         <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -49,181 +46,165 @@
   </header>
 
   <main>
-    <!-- ======================= 1. HERO ======================= -->
-    <section class="hero">
-      <div class="hero-media">
-        <img src="assets/img/pipas/pipa-1.jpg" alt="Pipa de cerámica hecha a mano" loading="eager">
+    <!-- ======================= HERO ======================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Hecho a mano en Puerto Rico</p>
+        <!-- El logo funciona como título principal de la portada; el <h1> lleva el nombre de la marca como texto accesible (alt) -->
+        <h1 class="hero-logo-heading">
+          <img src="assets/img/logo.png" alt="Cerámica Objetos" class="hero-logo">
+        </h1>
+        <p class="hero-subtag" data-i18n="hero.subtag">Objetos hermosos, hechos a mano, para el día a día</p>
+        <div class="hero-actions">
+          <a href="#colecciones" class="btn btn-primary" data-i18n="hero.cta.collections">Ver colecciones</a>
+          <a href="#contacto" class="btn btn-outline" data-i18n="hero.cta.contact">Cómo comprar</a>
+        </div>
       </div>
+    </section>
+
+    <!-- ======================= COLECCIONES (directorio de categorías) ======================= -->
+    <!--
+      Solo texto a propósito: sin fotos aquí, para que la persona haga clic
+      en el nombre de la categoría y vea las fotos en su propia página
+      (pipas.html, ceniceros.html, tazas.html, platos.html, shotglasses.html).
+    -->
+    <section id="colecciones" class="collections">
       <div class="container">
-        <div class="hero-content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Hecho a mano en Puerto Rico</p>
-          <h1 data-i18n="hero.title">[ESCRIBE AQUÍ: un titular corto para la portada]</h1>
-          <div class="hero-actions">
-            <a href="tienda.html" class="btn btn-primary" data-i18n="hero.cta.shop">Ver tienda</a>
+        <p class="eyebrow center" data-i18n="collections.eyebrow">Piezas</p>
+        <h2 class="center" data-i18n="collections.heading">Colecciones</h2>
+        <p class="section-lead center" data-i18n="collections.lead">
+          Explora por categoría. Cada pieza es única, hecha a mano una a la vez.
+        </p>
+
+        <ul class="collections-list">
+          <li><a class="collection-link" href="pipas.html"><span data-i18n="nav.pipas">Pipas</span></a></li>
+          <li><a class="collection-link" href="ceniceros.html"><span data-i18n="nav.ceniceros">Ceniceros</span></a></li>
+          <li><a class="collection-link" href="tazas.html"><span data-i18n="nav.tazas">Tazas</span></a></li>
+          <li><a class="collection-link" href="platos.html"><span data-i18n="nav.platos">Platos</span></a></li>
+          <li><a class="collection-link" href="shotglasses.html"><span data-i18n="nav.shotglasses">Shotglasses</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= SOBRE MÍ / LA MARCA ======================= -->
+    <section id="sobre-mi" class="about">
+      <div class="container about-grid">
+        <div class="about-media">
+          <!-- Foto real, ajustada y recortada a la proporción de esta sección -->
+          <img src="assets/img/sobre-mi.jpg" alt="La ceramista de Cerámica Objetos" loading="lazy">
+        </div>
+        <div class="about-text">
+          <p class="eyebrow" data-i18n="about.eyebrow">Sobre mí</p>
+          <h2 data-i18n="about.heading">Arcilla, paciencia y raíz local</h2>
+
+          <div class="bio-text" data-i18n-html="about.bio">
+            <p>¡Hola! Me llamo Karina y con mis manos soy la que creo todo lo que ven aquí.</p>
+            <p>
+              Comencé en cerámica en el 2020, bajo la tutela de Ivonne Prats. Desde entonces me
+              he dedicado a explorar mi inspiración más grande: mi país, Puerto Rico. Hay tanta
+              belleza en todos lados que es fácil encontrar formas, texturas y colores para crear.
+            </p>
+            <p>
+              Me apasiona investigar todo lo que conecta con mi herencia: el proceso ancestral de
+              los taínos y de las culturas mexicanas, la cerámica contemporánea, y cómo la
+              influencia europea ha marcado nuestra cultura criolla —en especial, la cerámica y
+              sus usos. En 2026 nació en mí un interés particular por explorar el barro nativo, y
+              en un futuro cercano tengo como objetivo incorporarlo en mis piezas.
+            </p>
+            <p>
+              No me gusta seguir tendencias ni especializarme en un solo objeto; mi filosofía es
+              crear piezas atemporales, bellas y duraderas, que puedan funcionar en espacios tanto
+              hoy como en el futuro.
+            </p>
+            <p>¡Gracias por estar aquí!</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======================= 2. EPÍGRAFE ======================= -->
-    <section class="epigraph">
-      <div class="container">
-        <blockquote data-i18n="epigraph.text">[ESCRIBE AQUÍ: una frase en primera persona sobre el barro y tus manos]</blockquote>
-      </div>
-    </section>
+    <!-- ======================= CÓMO COMPRAR / CONTACTO ======================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Cómo comprar</p>
+          <h2 data-i18n="contact.heading">Hagamos un pedido</h2>
+          <p class="section-lead" data-i18n="contact.lead">
+            Escríbeme por el formulario, o directamente por redes sociales, WhatsApp o correo.
+            Te respondo lo antes posible con disponibilidad y precios.
+          </p>
 
-    <!-- ======================= 3. TRES TARJETAS DE CATEGORÍA ======================= -->
-    <!--
-      "Esculturas" no se muestra todavía: según tu propia regla ("solo
-      categorías y subcategorías con piezas cargadas"), esta categoría no
-      tiene piezas reales aún. En cuanto agregues la primera pieza de
-      Esculturas, se puede sumar aquí como tercera tarjeta.
-    -->
-    <section class="category-cards">
-      <div class="container">
-        <p class="eyebrow center" data-i18n="cards.eyebrow">Comprar</p>
-        <h2 class="center" data-i18n="cards.heading">Compra por categoría</h2>
+          <!-- REEMPLAZAR: información de contacto real -->
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer">@TU_USUARIO</a>
+            </li>
+            <li>
+              <span class="contact-label">WhatsApp</span>
+              <a href="https://wa.me/17870000000" target="_blank" rel="noopener noreferrer">+1 (787) 000-0000</a>
+            </li>
+            <li>
+              <span class="contact-label" data-i18n="contact.label.email">Correo</span>
+              <a href="mailto:hola@ceramicaobjetos.com">hola@ceramicaobjetos.com</a>
+            </li>
+            <li>
+              <span class="contact-label" data-i18n="contact.label.location">Ubicación</span>
+              <span>Bayamón, Puerto Rico</span>
+            </li>
+          </ul>
+        </div>
 
-        <div class="cards-grid">
-          <a class="category-card" href="para-la-casa.html">
-            <div class="category-card-media">
-              <img src="assets/img/tazas/taza-1.jpg" alt="Tazas de cerámica hechas a mano" loading="lazy">
+        <div class="contact-form-wrap">
+          <!--
+            REEMPLAZAR: este formulario no envía datos por sí solo (es HTML/JS estático,
+            sin backend). Para recibir los mensajes por correo, conéctalo a un servicio
+            gratuito como Formspree (https://formspree.io) o Getform (https://getform.io):
+              1. Crea una cuenta y un formulario nuevo en ese servicio.
+              2. Copia el "endpoint" (URL) que te dan.
+              3. Reemplaza el valor de action="" de abajo con esa URL.
+            Alternativamente, borra el formulario y deja solo los enlaces de contacto de arriba.
+          -->
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST">
+            <div class="form-field">
+              <label for="name" data-i18n="form.label.name">Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
             </div>
-            <span class="category-card-label" data-i18n="cards.home">Para la casa</span>
-          </a>
-          <a class="category-card" href="para-encender.html">
-            <div class="category-card-media">
-              <img src="assets/img/pipas/pipas-colectivo.jpg" alt="Pipas y ceniceros de cerámica hechos a mano" loading="lazy">
+            <div class="form-field">
+              <label for="email" data-i18n="form.label.email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
             </div>
-            <span class="category-card-label" data-i18n="cards.light">Para encender</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================= 4. MÁS VENDIDOS ======================= -->
-    <!--
-      Selección manual (el sitio no tiene datos de ventas reales todavía):
-      una pieza representativa de cada subcategoría cargada. Ajusta esta
-      selección en cualquier momento según tus ventas reales.
-    -->
-    <section class="bestsellers">
-      <div class="container">
-        <p class="eyebrow center" data-i18n="bestsellers.eyebrow">Favoritas</p>
-        <h2 class="center" data-i18n="bestsellers.heading">Más vendidos</h2>
-
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <a class="gallery-item-link" href="producto/pipa-terracota.html">
-              <div class="gallery-item-media">
-                <img src="assets/img/pipas/pipa-1.jpg" alt="Pipa Terracota" loading="lazy">
-                <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
-              </div>
-              <figcaption>
-                <span class="piece-name" data-i18n="pipas.item1.name">Pipa Terracota</span>
-                <span class="piece-price">$XX</span>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="gallery-item">
-            <a class="gallery-item-link" href="producto/cenicero-arcilla.html">
-              <div class="gallery-item-media">
-                <img src="assets/img/ceniceros/cenicero-1.jpg" alt="Cenicero Arcilla" loading="lazy">
-                <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
-              </div>
-              <figcaption>
-                <span class="piece-name" data-i18n="ceniceros.item1.name">Cenicero Arcilla</span>
-                <span class="piece-price">$XX</span>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="gallery-item">
-            <a class="gallery-item-link" href="producto/taza-jade.html">
-              <div class="gallery-item-media">
-                <img src="assets/img/tazas/taza-1.jpg" alt="Taza Jade" loading="lazy">
-                <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
-              </div>
-              <figcaption>
-                <span class="piece-name" data-i18n="tazas.item1.name">Taza Jade</span>
-                <span class="piece-price">$XX</span>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="gallery-item">
-            <a class="gallery-item-link" href="producto/shotglass-fiesta.html">
-              <div class="gallery-item-media">
-                <img src="assets/img/shotglasses/shot-1.jpg" alt="Shotglass Fiesta" loading="lazy">
-                <span class="piece-status is-available" data-i18n="piece.status.available">Disponible</span>
-              </div>
-              <figcaption>
-                <span class="piece-name" data-i18n="shotglasses.item1.name">Shotglass Fiesta</span>
-                <span class="piece-price">$XX</span>
-              </figcaption>
-            </a>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================= 5. MIS MANOS ======================= -->
-    <section class="hands-teaser">
-      <div class="container hands-teaser-grid">
-        <div class="hands-teaser-media">
-          <img src="assets/img/sobre-mi.jpg" alt="Karina en su taller de cerámica" loading="lazy">
-        </div>
-        <div class="hands-teaser-text">
-          <p class="eyebrow" data-i18n="hands.eyebrow">Mis manos</p>
-          <h2 data-i18n="hands.heading">Hecho a mano, pieza por pieza</h2>
-          <p data-i18n="hands.text">Hago cerámica desde el 2020, en mi taller en Bayamón, Puerto Rico. Cada pieza que ves aquí pasa por mis manos, una a la vez — [ESCRIBE AQUÍ: 2–3 líneas más en tu voz].</p>
-          <a href="historia.html" class="btn btn-outline" data-i18n="hands.cta">Leer mi historia</a>
+            <div class="form-field">
+              <label for="message" data-i18n="form.label.message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="form.submit">Enviar mensaje</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ======================= 6. PIE DE PÁGINA ======================= -->
+  <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-columns">
-        <div class="footer-brand">
-          <p class="logo">Cerámica Objetos</p>
-          <p data-i18n="footer.tagline">Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
-
-          <!-- REEMPLAZAR: conecta este formulario a tu servicio de correo (Formspree, Getform, Mailchimp, etc.) -->
-          <form class="footer-signup-form" data-note-target="footerSignupNote" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST">
-            <label class="sr-only" for="footerSignupEmail" data-i18n="footer.signup.placeholder">Tu correo electrónico</label>
-            <input type="email" id="footerSignupEmail" name="email" required data-i18n-placeholder="footer.signup.placeholder" placeholder="Tu correo electrónico">
-            <button type="submit" class="btn btn-primary" data-i18n="footer.signup.submit">Suscribirme</button>
-          </form>
-          <p class="footer-signup-note" id="footerSignupNote" role="status" aria-live="polite"></p>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-i18n="footer.shipping.heading">Envíos</p>
-          <p data-i18n="footer.shipping.text">[ESCRIBE AQUÍ: tu política de envíos — zonas, tiempos, costo]</p>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-i18n="footer.returns.heading">Devoluciones</p>
-          <p data-i18n="footer.returns.text">[ESCRIBE AQUÍ: tu política de devoluciones y cambios]</p>
-        </div>
-
-        <div class="footer-col" id="pie-contacto">
-          <p class="footer-heading" data-i18n="footer.contact.heading">Contacto</p>
-          <p><a href="mailto:hola@ceramicaobjetos.com">hola@ceramicaobjetos.com</a></p>
-          <p>Bayamón, Puerto Rico</p>
-          <ul class="footer-social">
-            <li><a href="https://instagram.com/ceramica_objetos" target="_blank" rel="noopener noreferrer">Instagram @ceramica_objetos</a></li>
-          </ul>
-        </div>
+      <div class="footer-brand">
+        <p class="logo">Cerámica Objetos</p>
+        <p data-i18n="footer.tagline">Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
       </div>
+
+      <!-- REEMPLAZAR: enlaces de redes sociales -->
+      <ul class="footer-social">
+        <li><a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://wa.me/17870000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        <li><a href="mailto:hola@ceramicaobjetos.com">Email</a></li>
+      </ul>
 
       <p class="footer-copy"><span data-i18n="footer.copyPrefix">&copy; </span><span id="year"></span><span data-i18n="footer.copySuffix"> Cerámica Objetos. Todos los derechos reservados.</span></p>
     </div>
   </footer>
 
   <script src="js/i18n.js"></script>
-  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
