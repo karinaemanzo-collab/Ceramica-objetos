@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-title="page.title.carrito">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito | Cerámica Objetos</title>
+  <meta name="description" content="Tu carrito de interés en Cerámica Objetos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+<body>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="Cerámica Objetos" class="logo-img">
+      </a>
+      <div class="nav-right">
+        <nav class="nav" id="siteNav">
+          <a href="tienda.html" data-i18n="nav.shop">Tienda</a>
+          <a href="historia.html" data-i18n="nav.history">Historia</a>
+          <a href="index.html#pie-contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Selector de idioma / Language selector">
+          <button type="button" data-lang="es">ES</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a href="carrito.html" class="cart-link" aria-current="page" data-i18n-aria-label="nav.cartAria" aria-label="Ver carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.95L20 8H6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="21" r="1.4" fill="currentColor" stroke="none"/>
+            <circle cx="18" cy="21" r="1.4" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="cart-count" hidden>0</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cart-page">
+      <div class="container">
+        <h1 data-i18n="cart.heading">Tu carrito</h1>
+
+        <div class="cart-layout">
+          <div id="cartList" class="cart-list">
+            <!-- Las piezas del carrito se dibujan aquí con JavaScript (ver js/cart.js) -->
+          </div>
+
+          <div class="cart-summary">
+            <h2 data-i18n="cart.checkoutHeading">Terminar pedido</h2>
+            <p class="section-lead" data-i18n="cart.checkoutLead">
+              Este carrito guarda las piezas que te interesan. Déjame tus datos y te confirmo
+              disponibilidad, precio final y envío por correo.
+            </p>
+
+            <div class="cart-total-row">
+              <span data-i18n="cart.subtotal">Subtotal</span>
+              <span id="cartTotal">$0</span>
+            </div>
+            <p class="cart-total-note" id="cartTotalNote" data-i18n="cart.totalTBD">Total a confirmar</p>
+
+            <!-- REEMPLAZAR: este formulario no envía datos por sí solo. Conéctalo a
+                 Formspree (https://formspree.io) u otro servicio: crea una cuenta,
+                 copia tu endpoint y reemplaza el action="" de abajo. -->
+            <form class="contact-form" id="cartForm" data-note-target="cartFormNote" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST" style="margin-top: 28px;">
+              <input type="hidden" name="pedido" id="pedidoField">
+              <div class="form-field">
+                <label for="cartName" data-i18n="form.label.name">Nombre</label>
+                <input type="text" id="cartName" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="cartEmail" data-i18n="form.label.email">Email</label>
+                <input type="email" id="cartEmail" name="email" required autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="cartPhone" data-i18n="form.label.phone">Teléfono (opcional)</label>
+                <input type="tel" id="cartPhone" name="phone" autocomplete="tel">
+              </div>
+              <div class="form-field">
+                <label for="cartNotes" data-i18n="form.label.notes">Notas (opcional)</label>
+                <textarea id="cartNotes" name="notes" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" data-i18n="cart.submit">Enviar pedido</button>
+              <p class="form-note" id="cartFormNote" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-columns">
+        <div class="footer-brand">
+          <p class="logo">Cerámica Objetos</p>
+          <p data-i18n="footer.tagline">Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
+
+          <form class="footer-signup-form" data-note-target="footerSignupNote" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST">
+            <label class="sr-only" for="footerSignupEmail" data-i18n="footer.signup.placeholder">Tu correo electrónico</label>
+            <input type="email" id="footerSignupEmail" name="email" required data-i18n-placeholder="footer.signup.placeholder" placeholder="Tu correo electrónico">
+            <button type="submit" class="btn btn-primary" data-i18n="footer.signup.submit">Suscribirme</button>
+          </form>
+          <p class="footer-signup-note" id="footerSignupNote" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-i18n="footer.shipping.heading">Envíos</p>
+          <p data-i18n="footer.shipping.text">[ESCRIBE AQUÍ: tu política de envíos — zonas, tiempos, costo]</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-i18n="footer.returns.heading">Devoluciones</p>
+          <p data-i18n="footer.returns.text">[ESCRIBE AQUÍ: tu política de devoluciones y cambios]</p>
+        </div>
+
+        <div class="footer-col" id="pie-contacto">
+          <p class="footer-heading" data-i18n="footer.contact.heading">Contacto</p>
+          <p><a href="mailto:hola@ceramicaobjetos.com">hola@ceramicaobjetos.com</a></p>
+          <p>Bayamón, Puerto Rico</p>
+          <ul class="footer-social">
+            <li><a href="https://instagram.com/ceramica_objetos" target="_blank" rel="noopener noreferrer">Instagram @ceramica_objetos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-copy"><span data-i18n="footer.copyPrefix">&copy; </span><span id="year"></span><span data-i18n="footer.copySuffix"> Cerámica Objetos. Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart-page.js"></script>
+</body>
+</html>
