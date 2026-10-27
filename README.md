@@ -1,52 +1,35 @@
 # Cerámica Objetos
 
-Sitio web multi-página para **Cerámica Objetos**, negocio de piezas de
-cerámica hecha a mano en Puerto Rico, vertiente de **Proyecto Antillana**.
-Diseño editorial y minimalista, con paleta crimson red + off-white.
+Sitio web de una sola página para **Cerámica Objetos** / Karina, ceramista en
+Puerto Rico, vertiente de **Proyecto Antillana**. Diseño editorial y
+minimalista, con paleta crimson red + off-white.
 
 Sitio estático (HTML/CSS/JS puro, sin frameworks ni build step) pensado para
-publicarse con GitHub Pages. Cada categoría de producto tiene su propia
-página (estructura de navegación inspirada en catálogos de una página por
-categoría, sin copiar el diseño visual de ninguna marca en particular).
+publicarse con GitHub Pages.
+
+**A propósito, el sitio es solo el "about me" / statement de artista.** La
+tienda (categorías de piezas, precios, sección de compra) todavía no se
+lanza — se quitó deliberadamente para no mostrar un flujo de compra antes de
+tiempo. Cuando quieras volver a abrirla, se puede traer de vuelta.
 
 ## Estructura
 
 ```
-index.html            Inicio: hero, Sobre Mí, directorio de colecciones, Contacto
-pipas.html             Página de la categoría Pipas
-ceniceros.html          Página de la categoría Ceniceros
-tazas.html              Página de la categoría Tazas
-shotglasses.html        Página de la categoría Shotglasses
+index.html            Página única: hero + Sobre Mí / statement de artista
 css/styles.css          Estilos (paleta de colores, tipografía, responsive)
-js/main.js              Menú móvil y mensaje del formulario de contacto
-assets/img/             Imágenes (placeholders a reemplazar por fotos reales)
-assets/img/pipas/       Fotos reales de la categoría Pipas
+js/main.js              Año del footer
+js/i18n.js               Selector de idioma ES/EN
+assets/img/             Imágenes (sobre-mi.jpg, logo, favicon)
 ```
-
-Las 4 páginas de categoría comparten la misma estructura: una foto grande
-destacada arriba (hero de la categoría) y debajo una cuadrícula de piezas,
-cada una con su nombre y un espacio para el precio.
 
 ## Qué reemplazar antes de publicar
 
-Busca los comentarios `REEMPLAZAR` en cada archivo `.html` para encontrar:
+Busca los comentarios `REEMPLAZAR` y los textos en `js/i18n.js` para
+encontrar:
 
-- **Imágenes de Ceniceros, Tazas y Shotglasses**: estas tres categorías
-  todavía usan placeholders (`assets/img/cenicero-*.svg`, `taza-*.svg`,
-  `shot-*.svg`). Reemplázalas por fotos reales siguiendo el mismo patrón
-  que ya tiene `pipas.html` con las fotos en `assets/img/pipas/`.
-- **Precios**: cada pieza tiene un `<span class="piece-price">$XX</span>`
-  de marcador. Edita el texto con el precio real de cada una.
-- **Textos**: el eslogan del hero, la historia en "Sobre mí" y la
-  descripción corta de cada categoría.
-- **Información de contacto**: usuario de Instagram, número de WhatsApp y
-  correo electrónico (aparecen en `index.html#contacto` y en el footer de
-  cada página).
-- **Formulario de contacto**: es HTML estático, no envía correos por sí
-  solo. Para recibir los mensajes, crea una cuenta gratuita en
-  [Formspree](https://formspree.io) o [Getform](https://getform.io) y
-  reemplaza el `action="..."` del `<form>` en `index.html` con el enlace
-  que te den.
+- **Textos**: el eslogan del hero y la historia en "Sobre mí" (clave
+  `about.bio` en `js/i18n.js`, en español e inglés).
+- **Foto**: `assets/img/sobre-mi.jpg` junto al statement.
 
 ## Publicar con GitHub Pages
 
