@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cerámica Objetos | Piezas de cerámica hecha a mano en Puerto Rico</title>
-  <meta name="description" content="Cerámica Objetos: piezas de cerámica hecha a mano en Bayamón, Puerto Rico, vertiente de Proyecto Antillana y su trabajo con arcilla local.">
+  <title>Cerámica Objetos | Karina, ceramista en Puerto Rico</title>
+  <meta name="description" content="Cerámica Objetos: el trabajo y el statement de artista de Karina, ceramista en Bayamón, Puerto Rico, vertiente de Proyecto Antillana.">
 
   <!-- Tipografía: Fraunces (serif editorial, delicada) para títulos, Inter (sans limpio) para texto general -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,13 @@
 </head>
 <body>
 
+  <!--
+    Sitio reducido a una sola página a propósito: solo el "about me" /
+    statement de artista. Todavía no se lanza la tienda (categorías de
+    piezas, precios, sección de compra). Cuando quieras volver a abrir la
+    tienda, dímelo y la traemos de vuelta.
+  -->
+
   <!-- ======================= NAV ======================= -->
   <header class="site-header">
     <div class="container nav-inner">
@@ -24,23 +31,10 @@
         <img src="assets/img/logo.png" alt="Cerámica Objetos" class="logo-img">
       </a>
       <div class="nav-right">
-        <nav class="nav" id="siteNav">
-          <a href="index.html" aria-current="page" data-i18n="nav.home">Inicio</a>
-          <a href="index.html#sobre-mi" data-i18n="nav.about">Sobre Mí</a>
-          <a href="pipas.html" data-i18n="nav.pipas">Pipas</a>
-          <a href="ceniceros.html" data-i18n="nav.ceniceros">Ceniceros</a>
-          <a href="tazas.html" data-i18n="nav.tazas">Tazas</a>
-          <a href="platos.html" data-i18n="nav.platos">Platos</a>
-          <a href="shotglasses.html" data-i18n="nav.shotglasses">Shotglasses</a>
-          <a href="index.html#contacto" data-i18n="nav.contact">Contacto</a>
-        </nav>
         <div class="lang-toggle" role="group" aria-label="Selector de idioma / Language selector">
           <button type="button" data-lang="es">ES</button>
           <button type="button" data-lang="en">EN</button>
         </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </div>
   </header>
@@ -55,38 +49,10 @@
           <img src="assets/img/logo.png" alt="Cerámica Objetos" class="hero-logo">
         </h1>
         <p class="hero-subtag" data-i18n="hero.subtag">Objetos hermosos, hechos a mano, para el día a día</p>
-        <div class="hero-actions">
-          <a href="#colecciones" class="btn btn-primary" data-i18n="hero.cta.collections">Ver colecciones</a>
-          <a href="#contacto" class="btn btn-outline" data-i18n="hero.cta.contact">Cómo comprar</a>
-        </div>
       </div>
     </section>
 
-    <!-- ======================= COLECCIONES (directorio de categorías) ======================= -->
-    <!--
-      Solo texto a propósito: sin fotos aquí, para que la persona haga clic
-      en el nombre de la categoría y vea las fotos en su propia página
-      (pipas.html, ceniceros.html, tazas.html, platos.html, shotglasses.html).
-    -->
-    <section id="colecciones" class="collections">
-      <div class="container">
-        <p class="eyebrow center" data-i18n="collections.eyebrow">Piezas</p>
-        <h2 class="center" data-i18n="collections.heading">Colecciones</h2>
-        <p class="section-lead center" data-i18n="collections.lead">
-          Explora por categoría. Cada pieza es única, hecha a mano una a la vez.
-        </p>
-
-        <ul class="collections-list">
-          <li><a class="collection-link" href="pipas.html"><span data-i18n="nav.pipas">Pipas</span></a></li>
-          <li><a class="collection-link" href="ceniceros.html"><span data-i18n="nav.ceniceros">Ceniceros</span></a></li>
-          <li><a class="collection-link" href="tazas.html"><span data-i18n="nav.tazas">Tazas</span></a></li>
-          <li><a class="collection-link" href="platos.html"><span data-i18n="nav.platos">Platos</span></a></li>
-          <li><a class="collection-link" href="shotglasses.html"><span data-i18n="nav.shotglasses">Shotglasses</span></a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ======================= SOBRE MÍ / LA MARCA ======================= -->
+    <!-- ======================= SOBRE MÍ / STATEMENT DE ARTISTA ======================= -->
     <section id="sobre-mi" class="about">
       <div class="container about-grid">
         <div class="about-media">
@@ -121,68 +87,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ======================= CÓMO COMPRAR / CONTACTO ======================= -->
-    <section id="contacto" class="contact">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <p class="eyebrow" data-i18n="contact.eyebrow">Cómo comprar</p>
-          <h2 data-i18n="contact.heading">Hagamos un pedido</h2>
-          <p class="section-lead" data-i18n="contact.lead">
-            Escríbeme por el formulario, o directamente por redes sociales, WhatsApp o correo.
-            Te respondo lo antes posible con disponibilidad y precios.
-          </p>
-
-          <!-- REEMPLAZAR: información de contacto real -->
-          <ul class="contact-list">
-            <li>
-              <span class="contact-label">Instagram</span>
-              <a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer">@TU_USUARIO</a>
-            </li>
-            <li>
-              <span class="contact-label">WhatsApp</span>
-              <a href="https://wa.me/17870000000" target="_blank" rel="noopener noreferrer">+1 (787) 000-0000</a>
-            </li>
-            <li>
-              <span class="contact-label" data-i18n="contact.label.email">Correo</span>
-              <a href="mailto:hola@ceramicaobjetos.com">hola@ceramicaobjetos.com</a>
-            </li>
-            <li>
-              <span class="contact-label" data-i18n="contact.label.location">Ubicación</span>
-              <span>Bayamón, Puerto Rico</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="contact-form-wrap">
-          <!--
-            REEMPLAZAR: este formulario no envía datos por sí solo (es HTML/JS estático,
-            sin backend). Para recibir los mensajes por correo, conéctalo a un servicio
-            gratuito como Formspree (https://formspree.io) o Getform (https://getform.io):
-              1. Crea una cuenta y un formulario nuevo en ese servicio.
-              2. Copia el "endpoint" (URL) que te dan.
-              3. Reemplaza el valor de action="" de abajo con esa URL.
-            Alternativamente, borra el formulario y deja solo los enlaces de contacto de arriba.
-          -->
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/TU_ID_DE_FORMULARIO" method="POST">
-            <div class="form-field">
-              <label for="name" data-i18n="form.label.name">Nombre</label>
-              <input type="text" id="name" name="name" required autocomplete="name">
-            </div>
-            <div class="form-field">
-              <label for="email" data-i18n="form.label.email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
-            </div>
-            <div class="form-field">
-              <label for="message" data-i18n="form.label.message">Mensaje</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" data-i18n="form.submit">Enviar mensaje</button>
-            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ======================= FOOTER ======================= -->
@@ -192,13 +96,6 @@
         <p class="logo">Cerámica Objetos</p>
         <p data-i18n="footer.tagline">Una vertiente de Proyecto Antillana · Bayamón, Puerto Rico</p>
       </div>
-
-      <!-- REEMPLAZAR: enlaces de redes sociales -->
-      <ul class="footer-social">
-        <li><a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://wa.me/17870000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-        <li><a href="mailto:hola@ceramicaobjetos.com">Email</a></li>
-      </ul>
 
       <p class="footer-copy"><span data-i18n="footer.copyPrefix">&copy; </span><span id="year"></span><span data-i18n="footer.copySuffix"> Cerámica Objetos. Todos los derechos reservados.</span></p>
     </div>
